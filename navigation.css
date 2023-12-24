@@ -1,0 +1,51 @@
+/* navigation.css */
+
+/* Ensures the header is full-width and flex is applied */
+header {
+    background-color: #373373; /* Dark purple background */
+    padding: 10px 20px; /* Adjust the padding to your liking */
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: right;
+    height: 100%;
+}
+
+/* Styles for each navigation item */
+nav ul li {
+    margin: 0;
+    padding: 0 15px; /* Adjust padding for spacing between items */
+}
+
+/* Remove margin from the last item to align it to the edge */
+nav ul li:last-child {
+    padding-right: 15;
+}
+
+/* Styles for navigation links */
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Add a hover effect for links */
+nav a:hover {
+    color: #a5a5d1; /* A lighter shade for hover effect */
+}
+
+/* Clear floats if any */
+nav::after {
+    content: "";
+    display: block;
+    clear: both;
+}

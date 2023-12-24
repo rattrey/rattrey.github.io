@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    color: #333; 
+}
+
+header {
+    background-color: #373373; 
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+section {
+    padding: 20px;
+    border-bottom: 1px solid #ddd; 
+}
+
+
+.btn, a.button {
+    background-color: #5050b0; 
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover, a.button:hover {
+    background-color: #5A3E7E;
+}
+
+
+.home-section {
+    background-color: #fff;
+    color: #373373;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.home-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.home-section p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 1.5em;
+}
+
+.btn {
+    background-color: #373373;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #5050b0;
+}
+
+
+.profile-image {
+    width: 150px; 
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    margin: 20px 0;
+}
+
+.social-links a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-links img {
+    width: 30px;
+    height: auto;
+}
