@@ -74,10 +74,10 @@ section {
 
 
 .profile-image {
-    width: 150px; 
+    width: 400px; 
     height: auto;
     border-radius: 50%;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .social-links {
@@ -151,4 +151,57 @@ section {
     padding: 5px 10px;
     border-radius: 5px;
     display: inline-block;
+}
+
+
+
+.technical-skills-section {
+    padding: 40px 0;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.technical-skills, .leadership-skills {
+    width: 48%; /* Adjust the width as needed */
+}
+
+.skill {
+    margin-bottom: 10px;
+}
+
+.skill span {
+    font-weight: bold;
+}
+
+
+.skill-bar {
+    width: 100%; /* Full width to represent 10/10 */
+    background-color: #ddd; /* Light grey color for the background */
+    border-radius: 5px;
+    overflow: hidden; /* Ensures proficiency bar stays within this container */
+}
+
+.proficiency {
+    height: 20px;
+    background-color: #4CAF50; /* Green for the actual proficiency */
+    color: white;
+    text-align: right;
+    padding-right: 5px;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+}
+
+
+@media (max-width: 768px) {
+    .skills-container {
+        flex-direction: column;
+    }
+
+    .technical-skills, .leadership-skills {
+        width: 100%;
+    }
 }
