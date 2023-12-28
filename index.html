@@ -45,20 +45,23 @@
 
 
     <section id="portfolio" class="portfolio-section">
-        <h2>My Projects</h2>
-        <div class="portfolio-container">
-            <!-- Project Card 1 -->
-            <div class="project-card">
-                <img src="img/img1.png" alt="Project 1">
-                <div class="project-info">
-                    <h3>Project Title 1</h3>
-                    <p>Short description of the project...</p>
-                    <p><strong>Tools:</strong> Python, SQL, Tableau</p>
-                    <a href="project1.html" class="read-more">Read More</a>
+        <div class="project-card">
+            <img src="img/img1.png" alt="Project 1">
+            <div class="project-info">
+                <h3>Project Title 1</h3>
+                <p>Short description of the project...</p>
+                <p><strong>Tools:</strong> Python, SQL, Tableau</p>
+                <button class="read-more" onclick="openModal('modal1', 'project1.html')">Read More</button>
+            </div>
+            <!-- Empty Modal Structure -->
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal1')">&times;</span>
+                    <!-- Content will be loaded here -->
                 </div>
             </div>
-            <!-- Repeat for other project cards -->
         </div>
+        
     </section>
     
 
