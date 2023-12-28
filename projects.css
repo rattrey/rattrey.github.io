@@ -23,6 +23,7 @@ body.modal-open {
     width: 60%; 
     border-radius: 5px;
     position: relative;
+    cursor: default;
 }
 /* Prevent background scrolling when modal is open */
 body.modal-open {
@@ -94,3 +95,5 @@ code {
         padding: 10px;
     }
 }
+
+

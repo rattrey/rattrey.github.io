@@ -95,12 +95,21 @@ section {
 }
 
 .portfolio-section {
-    padding: 40px 0;
+    padding: 40px 0; 
 }
 
 .portfolio-container {
-    overflow-x: auto;
+    display: flex;
+    overflow-x: auto; /* Enables horizontal scrolling */
     white-space: nowrap;
+    cursor: grab; /* Cursor to indicate grabbable area */
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+    padding: 0 20px; /* Adds padding on the sides */
+}
+
+.portfolio-container::-webkit-scrollbar {
+    display: none; /* For Webkit browsers, hides scrollbar */
 }
 
 .project-card {
@@ -108,24 +117,33 @@ section {
     width: 500px;
     margin: 0 15px;
     vertical-align: top;
-    position: relative; 
-    overflow: hidden; 
+    position: relative;
+    overflow: hidden;
+    border-radius: 35px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    background-color: #fff; 
+    transition: transform 0.3s ease-in-out;
+    flex: 0 0 25%; 
+    height: 350px; 
 }
 
 .project-card img {
     width: 100%;
-    height: auto;
-    border-radius: 10px;
-    transition: transform 0.3s ease-in-out;
+    height: auto; 
+    border-radius: 10px 10px 0 0;
+    object-fit: cover; 
+    object-position: center; 
 }
+
+
 
 .project-info {
     position: absolute;
-    top: 0; 
-    left: 0; 
+    top: 0;
+    left: 0;
     right: 0;
-    bottom: 0; 
-    background: rgba(0, 0, 0, 0.7); 
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
     color: white;
     padding: 20px;
     transform: translateY(100%);
@@ -137,11 +155,11 @@ section {
 }
 
 .project-card:hover img {
-    transform: scale(1.1); /* Optional: Zoom effect on image hover */
+    transform: scale(1.1); /* Zoom effect on image hover */
 }
 
 .project-info h3, .project-info p, .read-more {
-    margin: 10px 0; 
+    margin: 10px 0;
 }
 
 .read-more {
@@ -151,6 +169,14 @@ section {
     padding: 5px 10px;
     border-radius: 5px;
     display: inline-block;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .project-card {
+        width: 100%; /* Adjust width for smaller screens */
+        margin: 10px 0; /* Adjust margin for smaller screens */
+    }
 }
 
 
@@ -205,3 +231,6 @@ section {
         width: 100%;
     }
 }
+
+
+
