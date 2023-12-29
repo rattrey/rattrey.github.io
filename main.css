@@ -133,7 +133,7 @@ section {
 
 .project-card img {
     width: 100%;
-    height: 100%; 
+    height: auto; 
     border-radius: 10px 10px 0 0;
     object-fit: cover; 
     object-position: center; 
@@ -227,24 +227,15 @@ section {
 }
 
 
-@media (max-width: 768px) {
-    .skills-container {
-        flex-direction: column;
-    }
-
-    .technical-skills, .leadership-skills {
-        width: 100%;
-    }
-
+@media screen and (max-width: 375px) {
     .project-card {
-        height: 100%;
-        width: 100%;
-        margin: 10px 0;
+        width: 100%; /* Ensure card takes full width */
+        margin: 10px 0; /* Adjust margin for spacing */
     }
 
     .project-card img {
-        height: 100%;
-        width: 100%;
+        width: 100%; /* Full width of the card */
+        height: auto; /* Maintain aspect ratio */
     }
 }
 
