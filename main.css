@@ -185,15 +185,6 @@ section {
 }
 
 
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    .project-card {
-        width: 100%; /* Adjust width for smaller screens */
-        margin: 10px 0; /* Adjust margin for smaller screens */
-    }
-}
-
-
 
 .technical-skills-section {
     padding: 40px 0;
