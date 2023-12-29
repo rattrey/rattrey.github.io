@@ -11,7 +11,7 @@ body.modal-open {
     top: 0;
     width: 100%; 
     height: 100%; 
-    overflow-y: auto; /* Enable scroll inside the modal */
+    overflow-y: auto; 
     background-color: rgba(0,0,0,0.4); 
 }
 
@@ -24,7 +24,15 @@ body.modal-open {
     border-radius: 5px;
     position: relative;
     cursor: default;
+
+
+    display: block;
+    word-wrap: break-word;
+    white-space: normal;
+    overflow: visible;
+    padding-right: 5%;
 }
+
 /* Prevent background scrolling when modal is open */
 body.modal-open {
     overflow: hidden;
@@ -67,6 +75,7 @@ pre {
     padding: 10px;
     border-radius: 5px;
     overflow-x: auto;
+    margin-bottom: 10px;
 }
 
 code {
@@ -74,26 +83,13 @@ code {
     color: #d6336c;
 }
 
-/* Adjustments for 'Read More' link styling if needed */
-.read-more {
-    background-color: #373373;
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    display: inline-block;
-}
 
-.read-more:hover {
-    background-color: #284184;
-}
 
-/* Responsive Design for smaller devices */
+
 @media screen and (max-width: 768px) {
-    .project-details {
+    .modal-content {
         width: 95%;
-        padding: 10px;
+        padding: 10px; 
     }
 }
-
 
