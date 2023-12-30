@@ -238,30 +238,42 @@ section {
 
 
     .project-card {
-        height: auto; 
-        width: 100%; 
-        margin: 10px 0;
+        display: inline-block;
+        width: 500px;
+        margin: 0 15px;
+        vertical-align: top;
+        position: relative;
+        overflow: hidden;
+        border-radius: 35px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        background-color: #fff; 
+        transition: transform 0.3s ease-in-out;
+        flex: 0 0 25%; 
+        height: 350px; 
     }
 
     .project-card img {
-        height: 200px; 
-        width: 100%; 
+        width: 100%;
+        height: 100%; 
+        border-radius: 10px 10px 0 0;
         object-fit: cover; 
-        border-radius: 10px 10px 0 0; 
+        object-position: center; 
+        overflow: visible;
     }
 
     .project-info {
         position: absolute;
-        top: 200px;
+        top: 0;
         left: 0;
         right: 0;
-        background: rgba(0, 0, 0, 0.7); 
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
         color: white;
-        padding: 10px;
-        transform: translateY(0); 
+        padding: 20px;
+        transform: translateY(100%);
+        transition: transform 0.3s ease-in-out;
+        width: 100%;
         display: block;
-        word-wrap: break-word;
-        white-space: normal;
-        overflow: visible; 
+        overflow: visible;
     }
 }
