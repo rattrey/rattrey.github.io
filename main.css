@@ -239,8 +239,9 @@ section {
 
     .project-card {
         display: inline-block;
-        width: 500px;
-        margin: 0 15px;
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
         vertical-align: top;
         position: relative;
         overflow: hidden;
@@ -253,9 +254,9 @@ section {
     }
 
     .project-card img {
-        width: 500px;
-        height: 100%; 
-        border-radius: 10px 10px 0 0;
+        width: 100%;
+        height: auto; 
+        border-radius: 20px 20px 0 0;
         object-fit: cover; 
         object-position: center; 
         overflow: visible;
@@ -269,11 +270,17 @@ section {
         bottom: 0;
         background: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
         color: white;
-        padding: 20px;
+        padding: 10px;
         transform: translateY(100%);
         transition: transform 0.3s ease-in-out;
         width: 100%;
         display: block;
         overflow: visible;
     }
+}
+
+img[src="img/priceoptimization.jpeg"] {
+    width :500px;
+    height:auto;
+    margin:55px;
 }
