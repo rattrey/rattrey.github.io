@@ -226,40 +226,48 @@ section {
     z-index: 1;
 }
 
-
 @media (max-width: 768px) {
+    .skills-container {
+        flex-direction: column;
+    }
+
+    .technical-skills, .leadership-skills {
+        width: 100%;
+    }
+
     .project-card {
-        display: block; /* Full width block display */
-        width: 100%; /* Use the full width available */
-        margin: 10px auto; /* Center the card with vertical spacing */
-        height: auto; /* Allow height to adjust based on content */
-        border-radius: 10px; /* Consistent border radius */
+        display: block;
+        width: 100%;
+        margin: 10px auto;
+        height: auto;
+        border-radius: 10px;
     }
 
     .project-card img {
-        width: 100%; /* Full width of the card */
-        height: auto; /* Maintain aspect ratio */
-        object-fit: cover; /* Cover the card area */
-        border-radius: 10px 10px 0 0; /* Rounded top corners */
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px 10px 0 0;
     }
 
     .project-info {
         position: absolute;
-        top: 50%; /* Adjust based on the image height */
+        top: 50%;
         left: 0;
         right: 0;
-        background: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
+        background: rgba(0, 0, 0, 0.7);
         color: white;
         padding: 10px;
-        transform: translateY(-50%); /* Center vertically */
-        width: 100%; /* Full width */
+        transform: translateY(-50%);
+        width: 100%;
     }
+
+
 }
 
-
 img[src="img/priceoptimization.jpeg"] {
-    width :500px;
-    height:auto;
-    margin:55px;
-    padding: 20px;
+    width: 50%;
+    height: auto;
+    margin: 10px 0;
+    padding: 10px;
 }
