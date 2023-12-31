@@ -104,7 +104,7 @@ section {
 
 .portfolio-container {
     display: flex;
-    overflow-x: auto; 
+    overflow-x: auto; /* Enables horizontal scrolling */
     white-space: nowrap;
     cursor: grab; 
     scrollbar-width: none; 
@@ -226,6 +226,7 @@ section {
     z-index: 1;
 }
 
+
 @media (max-width: 768px) {
     .skills-container {
         flex-direction: column;
@@ -239,35 +240,37 @@ section {
         display: block;
         width: 100%;
         margin: 10px auto;
-        height: auto;
         border-radius: 10px;
+        height: auto;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
     }
 
     .project-card img {
         width: 100%;
-        height: auto;
+        height: 200px;
         object-fit: cover;
         border-radius: 10px 10px 0 0;
     }
 
     .project-info {
         position: absolute;
-        top: 50%;
+        top: 200px;
         left: 0;
         right: 0;
+        padding: 10px;
         background: rgba(0, 0, 0, 0.7);
         color: white;
-        padding: 10px;
-        transform: translateY(-50%);
+        transform: translateY(0);
         width: 100%;
+        word-wrap: break-word;
+        overflow: hidden;
     }
-
-
 }
 
 img[src="img/priceoptimization.jpeg"] {
-    width: 50%;
-    height: auto;
-    margin: 10px 0;
-    padding: 10px;
+    width :500px;
+    height:auto;
+    margin:55px;
+    padding: 20px;
 }
