@@ -6,6 +6,7 @@
     <title>Rohin's Portfolio</title>
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="navigation.css">
+    <link rel="stylesheet" href="timeline.css">
 </head>
 <body>
     <header>
@@ -94,7 +95,7 @@
                 <h3>Customer Segmentation Modeling</h3>
                 <p>In an effort to deepen analytical insights, I led the exploration and development of customer segmentation models to identify distinct user groups, enhancing targeted strategies and personalized user experiences.</p>                
                 <p><strong>Tools:</strong> Python</p>
-                <button class="read-more" onclick="openModal('modal3', 'project3.html')">Read More</button>
+                <button class="read-more" onclick="openModal('modal3', 'projects/Customer Segmentation.html')">Read More</button>
             </div>
             <!-- Empty Modal Structure -->
             <div id="modal3" class="modal">
@@ -105,6 +106,25 @@
             </div>
         </div>
 
+            <!--GA Monitoring-->
+
+            <div class="project-card">
+                <img src="img/img5.jpeg" alt="Google Analytics Event Monitoring">
+                <div class="project-info">
+                    <h3>Google Analytics Event Monitoring</h3>
+                    <p>Created an end-to-end google analytics event system from creating user events to monitoring events real time</p>
+                    <p><strong>Tools:</strong> Python, SQL, PySpark, AppScript, Slack Webhooks</p>
+                    <button class="read-more" onclick="openModal('modal4', 'projects/GA.html')">Read More</button>
+                </div>
+                <!-- Empty Modal Structure -->
+                <div id="modal5" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal('modal4')">&times;</span>
+                        <!-- Content will be loaded here -->
+                    </div>
+                </div>
+            </div>
+    
 
         <!--project 4-->
 
@@ -114,12 +134,12 @@
                 <h3>Virtual Data Model Development</h3>
                 <p>At Kijiji, I developed a comprehensive virtual data model, streamlining data for extraction, production and reporting. This work significantly reduced analysis time, unified reporting metrics across the organization, optimized query performance, and minimized data failures, ensuring stakeholders access reliable, consistent data for critical decision-making.</p>                
                 <p><strong>Tools:</strong>SQL</p>
-                <button class="read-more" onclick="openModal('modal4', 'project4.html')">Read More</button>
+                <button class="read-more" onclick="openModal('modal5', 'projects/VDM.html')">Read More</button>
             </div>
             <!-- Empty Modal Structure -->
             <div id="modal4" class="modal">
                 <div class="modal-content">
-                    <span class="close" onclick="closeModal('modal4')">&times;</span>
+                    <span class="close" onclick="closeModal('modal5')">&times;</span>
                     <!-- Content will be loaded here -->
                 </div>
             </div>
@@ -129,24 +149,6 @@
 
 
 
-        <!--project 5-->
-
-        <div class="project-card">
-            <img src="img/img5.jpeg" alt="Google Analytics Event Monitoring">
-            <div class="project-info">
-                <h3>Google Analytics Event Monitoring</h3>
-                <p>Created an end-to-end google analytics event system from creating user events to monitoring events real time</p>
-                <p><strong>Tools:</strong> Python, SQL, PySpark, AppScript, Slack Webhooks</p>
-                <button class="read-more" onclick="openModal('modal5', 'project5.html')">Read More</button>
-            </div>
-            <!-- Empty Modal Structure -->
-            <div id="modal5" class="modal">
-                <div class="modal-content">
-                    <span class="close" onclick="closeModal('modal5')">&times;</span>
-                    <!-- Content will be loaded here -->
-                </div>
-            </div>
-        </div>
 
         <div class="project-card">
             <img src="img/img2.jpeg" alt="Forecasting Methods">
@@ -154,12 +156,12 @@
                 <h3>Advanced Forecasting Techniques</h3>
                 <p>Implemented diverse forecasting models, including ARIMA, Bayesian Time Series, and Prophet, to provide stakeholders with robust, data-driven forecasts. This approach enhanced accuracy in predicting outcomes for experiments and key performance indicators, supporting strategic decisions.</p>
                 <p><strong>Tools:</strong>Python</p>
-                <button class="read-more" onclick="openModal('modal2', 'project2.html')">Read More</button>
+                <button class="read-more" onclick="openModal('modal6', 'projects/VDM.html')">Read More</button>
             </div>
             <!-- Empty Modal Structure -->
             <div id="modal2" class="modal">
                 <div class="modal-content">
-                    <span class="close" onclick="closeModal('modal2')">&times;</span>
+                    <span class="close" onclick="closeModal('modal6')">&times;</span>
                     <!-- Content will be loaded here -->
                 </div>
             </div>
@@ -296,8 +298,106 @@
     
     
     <section id="experience">
-        <div class="section-title"><h1>Experience</h1></div>
+        <div class="section-title"><h2>Experience</h2></div>
+        <div class="timeline">
+    
+            <!-- Education: BSc Health Sciences -->
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <h3>Honors Bachelor of Science (BSc)</h3>
+                    <p class="timeline-date">2015</p>
+                    <p>York University, Toronto, ON</p>
+                    <div class="hover-popup">Click for more Details</div>
+                    <div class="detail-box">
+                        <ul>
+                            <li>test</li>
+                        </ul>
+                    </div>
+                    <!-- Placeholder for details -->
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <h3>Title of Experience</h3>
+                    <p class="timeline-date">Date Range</p>
+                    <!-- Hidden detail box -->
+                    <div class="detail-box">
+                        <ul>
+                            <li>Detail 1</li>
+                            <li>Detail 2</li>
+                            <!-- More list items -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+    
+            <!-- Education: MSc Business Analytics -->
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <h3>Master of Science in Management (MSc), Business Analytics</h3>
+                    <p class="timeline-date">2018</p>
+                    <p>Ivey Business School, Western University, London, ON</p>
+                    <!-- Placeholder for details -->
+                </div>
+            </div>
+    
+            <!-- Professional Experience: Senior Data Analyst -->
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <h3>Senior Data Analyst – Enterprise Consumer Insights</h3>
+                    <p class="timeline-date">2018 - Early 2021</p>
+                    <ul>
+                        <li>Placeholder for job details...</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- Professional Experience: Data Scientist -->
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <h3>Data Scientist – Loblaw Companies Limited</h3>
+                    <p class="timeline-date">2021</p>
+                    <ul>
+                        <li>Placeholder for job details...</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- Professional Experience: Data Specialist -->
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <h3>Data Specialist – Analytics and Reporting, Ontario Health</h3>
+                    <p class="timeline-date">2021</p>
+                    <ul>
+                        <li>Placeholder for job details...</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <!-- Professional Experience: Analytics Manager -->
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <h3>Analytics Manager, Kijiji</h3>
+                    <p class="timeline-date">2021 - Present</p>
+                    <ul>
+                        <li>Placeholder for job details...</li>
+                    </ul>
+                </div>
+            </div>
+    
+        </div>
     </section>
+    
+    
 
     <section id="contact">
         <div class="section-title"><h1>Contact</h1></div>
