@@ -226,6 +226,8 @@ section {
     z-index: 1;
 }
 
+
+
 @media screen and (max-width: 768px) {
     .portfolio-container {
         display: block; 

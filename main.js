@@ -41,6 +41,25 @@ window.onkeydown = function(event) {
     }
 }
 
+// add swipe gesture for modal
+let touchStartY = 0;
+let touchEndY = 0;
+
+function handleSwipeGesture(modalId) {
+    const modal = document.getElementById(modalId);
+    modal.addEventListener('touchstart', e => {
+        touchStartY = e.changedTouches[0].screenY;
+    }, false);
+
+    modal.addEventListener('touchend', e => {
+        touchEndY = e.changedTouches[0].screenY;
+        if (touchStartY > touchEndY + 50) { // Swipe down threshold
+            closeModal(modalId);
+        }
+    }, false);
+}
+
+
 document.addEventListener('DOMContentLoaded', function() {
     const ele = document.querySelector('.portfolio-container');
     let pos = { top: 0, left: 0, x: 0, y: 0 };
