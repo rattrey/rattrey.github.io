@@ -97,3 +97,32 @@
 .detail-box {
     display:none;
 }
+
+
+
+@media screen and (max-width: 768px) {
+    .timeline-item {
+        margin: 10px 0;
+    }
+
+    .timeline-marker {
+        left: 10px; /* Adjust marker position */
+    }
+
+    .timeline-content {
+        width: calc(100% - 70px); /* Adjust width for mobile */
+        margin-left: 50px; /* Adjust margin for mobile */
+        padding: 10px; /* Adjust padding for mobile */
+    }
+
+    .timeline-item:nth-child(even) .timeline-content {
+        margin-left: 50px; /* Adjust margin for even items */
+        margin-right: auto;
+        border-right: none;
+        border-left: 5px solid #5050b0;
+    }
+
+    .timeline::before {
+        left: 10px; /* Adjust line position */
+    }
+}

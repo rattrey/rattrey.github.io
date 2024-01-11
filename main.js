@@ -104,16 +104,15 @@ function toggleDetails(elementId) {
     }
 }
 
+
+//for timeline content
 document.querySelectorAll('.timeline-content').forEach(item => {
     item.addEventListener('click', function() {
         var detailBox = this.querySelector('.detail-box');
-        if (detailBox.style.display === "none" || detailBox.style.display === "") {
-            detailBox.style.display = "block";
-        } else {
-            detailBox.style.display = "none";
-        }
+        detailBox.style.display = detailBox.style.display === "block" ? "none" : "block";
     });
 });
+
 
 
 //for email
