@@ -1,3 +1,7 @@
+// At the top of main.js
+emailjs.init("THnSQ6tca5mnQBbrg"); 
+
+
 function openModal(modalId, contentFile) {
     var modal = document.getElementById(modalId);
     var modalContent = modal.querySelector('.modal-content');
@@ -12,8 +16,6 @@ function openModal(modalId, contentFile) {
         .catch(error => console.error('Error loading modal content:', error));
 
     
-
-
 }
 
 function closeModal(modalId) {
@@ -92,4 +94,19 @@ document.querySelectorAll('.timeline-content').forEach(item => {
             detailBox.style.display = "none";
         }
     });
+});
+
+
+//for email
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    emailjs.sendForm('service_my6b9jp', 'template_kmkvimo', this)
+        .then(function() {
+            console.log('SUCCESS!');
+            alert('Message sent successfully!');
+        }, function(error) {
+            console.log('FAILED...', error);
+            alert('Failed to send the message, please try again.');
+        });
 });
