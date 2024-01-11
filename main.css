@@ -226,6 +226,35 @@ section {
     z-index: 1;
 }
 
+@media screen and (max-width: 768px) {
+    .portfolio-container {
+        /* Adjusting layout for smaller screens */
+        display: block; /* Optional: Change to vertical layout */
+        padding: 0 10px;
+    }
+
+    .project-card {
+        /* Full width for smaller screens */
+        width: 100%;
+        margin: 10px 0;
+        height: auto; /* Adjust height dynamically */
+        flex: 0 0 auto; /* Flex adjustments for mobile */
+    }
+
+    .project-card img {
+        height: auto; /* Adjust image height */
+    }
+
+    .project-info h3, .project-info p, .read-more {
+        font-size: smaller; /* Adjust text size for readability */
+        padding-right: 10px;
+    }
+
+    .read-more {
+        padding: 8px 15px; /* Larger button for easier click */
+        font-size: smaller;
+    }
+}
 
 /* @media (max-width: 768px) {
     .skills-container {
