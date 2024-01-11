@@ -228,74 +228,33 @@ section {
 
 @media screen and (max-width: 768px) {
     .portfolio-container {
-        /* Adjusting layout for smaller screens */
-        display: block; /* Optional: Change to vertical layout */
+        display: block; 
         padding: 0 10px;
     }
 
     .project-card {
-        /* Full width for smaller screens */
         width: 100%;
         margin: 10px 0;
-        height: auto; /* Adjust height dynamically */
-        flex: 0 0 auto; /* Flex adjustments for mobile */
+        height: auto;
+        flex: 0 0 auto; 
     }
 
     .project-card img {
-        height: auto; /* Adjust image height */
+        width: 100%;
+        height: 100%; 
     }
 
     .project-info h3, .project-info p, .read-more {
-        font-size: smaller; /* Adjust text size for readability */
+        font-size: smaller; 
         padding-right: 10px;
     }
 
     .read-more {
-        padding: 8px 15px; /* Larger button for easier click */
+        padding: 8px 15px;
         font-size: smaller;
     }
 }
 
-/* @media (max-width: 768px) {
-    .skills-container {
-        flex-direction: column;
-    }
-
-    .technical-skills, .leadership-skills {
-        width: 100%;
-    }
-
-    .project-card {
-        display: block;
-        width: 100%;
-        margin: 10px auto;
-        border-radius: 10px;
-        height: auto;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        background-color: #fff;
-    }
-
-    .project-card img {
-        width: 100%;
-        height: 300px;
-        object-fit: cover;
-        border-radius: 10px 10px 0 0;
-    }
-
-    .project-info {
-        position: absolute;
-        top: 200px;
-        left: 0;
-        right: 0;
-        padding: 10px;
-        background: rgba(0, 0, 0, 0.7);
-        color: white;
-        transform: translateY(0);
-        width: 100%;
-        word-wrap: break-word;
-        overflow: hidden;
-    }
-} */
 
 img[src="img/priceoptimization.jpeg"] {
     width :500px;
