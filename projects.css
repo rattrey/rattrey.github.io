@@ -20,15 +20,16 @@ body.modal-open {
     margin: 5% auto; 
     padding: 20px;
     border: 1px solid #888;
-    width: 60%; 
+    width: 80%; 
+    max-width: 600px;
     border-radius: 5px;
     position: relative;
     cursor: default;
     display: block;
     word-wrap: break-word;
     white-space: normal;
-    overflow: visible;
-    padding-right: 5%;
+    overflow: auto;
+
 }
 
 /* Prevent background scrolling when modal is open */
