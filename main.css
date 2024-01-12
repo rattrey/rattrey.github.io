@@ -235,8 +235,8 @@ section {
     }
 
     .project-card {
-        width: 100%;
-        margin: 10px 0;
+        width: 85%;
+        margin: 10px 5px;
         height: 250px;
         flex: 0 0 auto; 
     }
@@ -297,3 +297,27 @@ img[src="img/priceoptimization.jpeg"] {
     cursor: pointer;
 }
 
+@media screen and (max-width: 768px) {
+    .contact-container {
+        max-width: 60%;
+        padding: 10px;
+        
+    }
+
+    #contact-form input, #contact-form textarea {
+        padding: 15px; 
+        margin-bottom: 15px; 
+        font-size: 16px;
+    }
+
+    #contact-form button {
+        padding: 15px 30px; 
+        font-size: 16px;
+    }
+
+    .social-links a img {
+        width: 40px; 
+        height: 40px;
+        margin: 0 10px; 
+    }
+}

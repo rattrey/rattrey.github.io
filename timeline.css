@@ -102,7 +102,7 @@
 
 @media screen and (max-width: 768px) {
     .timeline-item {
-        margin: 10px 0;
+        margin: 10px ;
     }
 
     .timeline-marker {
@@ -110,7 +110,7 @@
     }
 
     .timeline-content {
-        width: calc(100% - 70px); /* Adjust width for mobile */
+        width: calc(100% - 90px); /* Adjust width for mobile */
         margin-left: 50px; /* Adjust margin for mobile */
         padding: 10px; /* Adjust padding for mobile */
     }
