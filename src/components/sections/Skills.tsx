@@ -235,7 +235,7 @@ const SkillCard: React.FC<{
   skillIndex: number;
 }> = ({ skill, categoryId, skillIndex }) => {
   return (
-    <div className={`${theme.card.base} ${theme.card.hover}`}>
+    <div className="bg-[#273e54] rounded-lg border border-[#324d65] hover:bg-[#324d65]">
       <div className="p-8">
         {/* Header Section */}
         <div className="space-y-4 mb-6">
@@ -284,7 +284,7 @@ const SkillCard: React.FC<{
         </div>
 
         {/* Case Study Section */}
-        <div className={`${theme.card.base} p-6 mb-6`}>
+        <div className="bg-[#273e54] rounded-lg border border-[#324d65] p-6 mb-6">
           <h4 className="text-lg font-medium text-white mb-3">
             {skill.caseStudy.project}
           </h4>
@@ -322,7 +322,7 @@ export default function EnhancedSkillsSection() {
   const [activeCategory, setActiveCategory] = useState<CategoryId | null>('technical');
 
   return (
-    <section className={`w-full min-h-screen py-20 bg-gradient-to-br ${theme.colors.gradients.primary}`}>
+    <section className={`w-full min-h-screen py-20 bg-white`}>
       <div className={classes.container}>
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -342,11 +342,11 @@ export default function EnhancedSkillsSection() {
                 key={key}
                 onClick={() => setActiveCategory(activeCategory === key ? null : key)}
                 className={`
-                  ${theme.card.base}
-                  ${theme.card.hover}
+                  bg-[#273e54] rounded-lg border border-[#324d65]
                   p-6 
                   transition-all 
                   duration-300
+                  hover:bg-[#324d65]
                   ${activeCategory === key ? 
                     `${theme.effects.glass} ${theme.effects.glow[key === 'technical' ? 'energy' : 
                       key === 'analytics' ? 'particle' : 'core']}` : 
