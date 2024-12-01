@@ -39,15 +39,15 @@ const categories: Categories = {
     icon: <Code2 className="w-6 h-6" />,
     title: "Technical Engineering & Infrastructure",
     description: "Building scalable data solutions and analytics infrastructure",
-    primaryColor: "from-blue-500/10 to-blue-500/5",
-    accentColor: "bg-blue-500",
-    textColor: "text-blue-700",
+    primaryColor: "bg-accent-energy-600/10",  // Updated to use our theme colors
+    accentColor: "text-accent-energy-600",    // Electric blue accent
+    textColor: "text-white",
     skills: [
       {
         name: "Data Engineering & Pipeline Development",
         yearsExperience: 3,
         currentlyUsing: true,
-        expertise: "Expert",
+        expertise: "Intermediate",
         applications: [
           "ETL Architecture",
           "Data Pipeline Design",
@@ -66,7 +66,7 @@ const categories: Categories = {
         name: "Analytics Engineering & Modeling",
         yearsExperience: 4,
         currentlyUsing: true,
-        expertise: "Expert",
+        expertise: "Advanced",
         applications: [
           "Virtual Data Modeling",
           "KPI Framework Development",
@@ -79,7 +79,7 @@ const categories: Categories = {
           impact: "Created unified 360-degree view of product performance with 90+ metrics",
           description: "Developed comprehensive KPI dashboard and virtual data model enabling cross-functional insights"
         },
-        relatedSkills: ["SQL", "dbt", "Data Modeling", "Dashboard Design", "Metrics Engineering"]
+        relatedSkills: ["SQL", "Data Modeling", "Star Schema", "Dashboard Design", "Metrics Engineering"]
       }
     ]
   },
@@ -87,9 +87,9 @@ const categories: Categories = {
     icon: <ChartBar className="w-6 h-6" />,
     title: "Advanced Analytics & Experimentation",
     description: "Driving decisions through statistical analysis and testing",
-    primaryColor: "from-purple-500/10 to-purple-500/5",
-    accentColor: "bg-purple-500",
-    textColor: "text-purple-700",
+    primaryColor: "bg-accent-particle-600/10",  // Particle glow accent
+    accentColor: "text-accent-particle-600",
+    textColor: "text-white",
     skills: [
       {
         name: "Experimentation & Testing",
@@ -135,9 +135,9 @@ const categories: Categories = {
     icon: <Users className="w-6 h-6" />,
     title: "Analytics Leadership",
     description: "Building high-performing teams and driving data strategy",
-    primaryColor: "from-green-500/10 to-green-500/5",
-    accentColor: "bg-green-500",
-    textColor: "text-green-700",
+    primaryColor: "bg-accent-core-600/10",    // Core orange accent
+    accentColor: "text-accent-core-600",
+    textColor: "text-white",
     skills: [
       {
         name: "Team Leadership & Development",
@@ -183,9 +183,9 @@ const categories: Categories = {
     icon: <Briefcase className="w-6 h-6" />,
     title: "Business Impact & Optimization",
     description: "Driving business value through data-driven solutions",
-    primaryColor: "from-orange-500/10 to-orange-500/5",
-    accentColor: "bg-orange-500",
-    textColor: "text-orange-700",
+    primaryColor: "bg-accent-energy-300/10",  // Subtle energy accent
+    accentColor: "text-accent-energy-300",
+    textColor: "text-white",
     skills: [
       {
         name: "Product Analytics",
@@ -234,27 +234,33 @@ const SkillCard: React.FC<{
   categoryId: CategoryId;
   skillIndex: number;
 }> = ({ skill, categoryId, skillIndex }) => {
-  const cardId = `${categoryId}-${skillIndex}`;
-
   return (
-    <div className={`${theme.card.base} ${theme.card.border} ${theme.card.hover}`}>
+    <div className={`${theme.card.base} ${theme.card.hover}`}>
       <div className="p-8">
         {/* Header Section */}
         <div className="space-y-4 mb-6">
           <div className="flex justify-between items-start">
-            <h3 className={`${classes.heading.h3} ${theme.colors.text.primary}`}>{skill.name}</h3>
-            <span className={`${theme.components.expertiseBadge[expertiseLevelToKey(skill.expertise)]} ${theme.components.tag.base}`}>
+            <h3 className="text-xl font-semibold text-white">{skill.name}</h3>
+            <span className={`
+              ${theme.card.base}
+              px-3 py-1 
+              text-sm 
+              rounded-full
+              ${skill.expertise === "Expert" ? "bg-accent-core-600/20 text-accent-core-300" :
+                skill.expertise === "Advanced" ? "bg-accent-energy-600/20 text-accent-energy-300" :
+                "bg-accent-particle-600/20 text-accent-particle-300"}
+            `}>
               {skill.expertise}
             </span>
           </div>
           
-          <div className={`flex items-center gap-3 text-sm ${theme.colors.text.secondary}`}>
+          <div className="flex items-center gap-3 text-sm text-white/80">
             <div className="flex items-center gap-1.5">
               <Timer className="w-4 h-4" />
               <span>{skill.yearsExperience}+ years</span>
             </div>
             {skill.currentlyUsing && (
-              <div className="flex items-center gap-1.5 text-green-600">
+              <div className="flex items-center gap-1.5 text-accent-energy-400">
                 <CheckCircle2 className="w-4 h-4" />
                 <span>Active</span>
               </div>
@@ -264,12 +270,12 @@ const SkillCard: React.FC<{
 
         {/* Applications Section */}
         <div className="mb-6">
-          <h4 className={`text-sm font-medium ${theme.colors.text.primary} mb-3`}>Key Applications</h4>
+          <h4 className="text-sm font-medium text-white mb-3">Key Applications</h4>
           <div className="flex flex-wrap gap-2">
             {skill.applications.map(app => (
               <span 
-                key={`${cardId}-${app}`} 
-                className={`${theme.components.tag.base} ${theme.components.tag.primary}`}
+                key={app} 
+                className="px-3 py-1.5 rounded-full text-sm bg-white/10 text-white"
               >
                 {app}
               </span>
@@ -278,27 +284,29 @@ const SkillCard: React.FC<{
         </div>
 
         {/* Case Study Section */}
-        <div className={`bg-primary-800/50 rounded-lg p-6 mb-6`}>
-          <h4 className={`text-lg font-medium ${theme.colors.text.primary} mb-3`}>
+        <div className={`${theme.card.base} p-6 mb-6`}>
+          <h4 className="text-lg font-medium text-white mb-3">
             {skill.caseStudy.project}
           </h4>
-          <p className={`${theme.colors.text.secondary} mb-4 leading-relaxed`}>
+          <p className="text-white/80 mb-4 leading-relaxed">
             {skill.caseStudy.description}
           </p>
-          <div className={`flex items-start gap-2 bg-primary-700/50 p-3 rounded-lg`}>
-            <CheckCircle2 className="w-5 h-5 text-accent-light flex-shrink-0 mt-0.5" />
-            <p className={`${theme.colors.text.primary} text-sm leading-relaxed`}>{skill.caseStudy.impact}</p>
+          <div className="flex items-start gap-2 bg-accent-core-600/10 p-3 rounded-lg">
+            <CheckCircle2 className="w-5 h-5 text-accent-core-600 flex-shrink-0 mt-0.5" />
+            <p className="text-white text-sm leading-relaxed">
+              {skill.caseStudy.impact}
+            </p>
           </div>
         </div>
 
         {/* Related Skills Section */}
         <div>
-          <h4 className={`text-sm font-medium ${theme.colors.text.primary} mb-3`}>Related Skills</h4>
+          <h4 className="text-sm font-medium text-white mb-3">Related Skills</h4>
           <div className="flex flex-wrap gap-2">
             {skill.relatedSkills.map(related => (
               <span 
-                key={`${cardId}-${related}`} 
-                className={`${theme.components.tag.base} ${theme.components.tag.accent}`}
+                key={related} 
+                className="px-3 py-1.5 rounded-full text-sm bg-accent-energy-600/10 text-accent-energy-300"
               >
                 {related}
               </span>
@@ -314,40 +322,71 @@ export default function EnhancedSkillsSection() {
   const [activeCategory, setActiveCategory] = useState<CategoryId | null>('technical');
 
   return (
-    <div className="space-y-8">
-      {/* Category Selection */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        {(Object.entries(categories) as [CategoryId, Category][]).map(([key, category]) => (
-          <button
-            key={key}
-            onClick={() => setActiveCategory(activeCategory === key ? null : key)}
-            className={`p-6 rounded-xl transition-all duration-300 bg-gradient-to-br
-              ${activeCategory === key ? category.primaryColor : 'hover:bg-gray-50'}
-              ${activeCategory && activeCategory !== key ? 'opacity-50' : 'opacity-100'}
-            `}
-          >
-            <div className={`${activeCategory === key ? category.textColor : 'text-gray-600'}`}>
-              {category.icon}
-            </div>
-            <h3 className="text-lg font-semibold mt-4 mb-2">{category.title}</h3>
-            <p className="text-sm text-gray-600">{category.description}</p>
-          </button>
-        ))}
-      </div>
-
-      {/* Skills Grid */}
-      {activeCategory && (
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {categories[activeCategory].skills.map((skill, index) => (
-            <SkillCard 
-              key={`${activeCategory}-${index}`}
-              skill={skill}
-              categoryId={activeCategory}
-              skillIndex={index}
-            />
-          ))}
+    <section className={`w-full min-h-screen py-20 bg-gradient-to-br ${theme.colors.gradients.primary}`}>
+      <div className={classes.container}>
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <h2 className={`${classes.heading.h2} text-accent-core-600 mb-4`}>
+            Skills & Expertise
+          </h2>
+          <p className="text-lg text-white max-w-3xl mx-auto">
+            Comprehensive experience in technical implementation, analytics leadership, and data strategy.
+          </p>
         </div>
-      )}
-    </div>
+
+        <div className="max-w-[1400px] mx-auto space-y-12"> {/* Added max-width container */}
+          {/* Category Selection */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {(Object.entries(categories) as [CategoryId, Category][]).map(([key, category]) => (
+              <button
+                key={key}
+                onClick={() => setActiveCategory(activeCategory === key ? null : key)}
+                className={`
+                  ${theme.card.base}
+                  ${theme.card.hover}
+                  p-6 
+                  transition-all 
+                  duration-300
+                  ${activeCategory === key ? 
+                    `${theme.effects.glass} ${theme.effects.glow[key === 'technical' ? 'energy' : 
+                      key === 'analytics' ? 'particle' : 'core']}` : 
+                    ''}
+                  ${activeCategory && activeCategory !== key ? 'opacity-75' : 'opacity-100'}
+                `}
+              >
+                <div className={`
+                  ${activeCategory === key ? `text-accent-${key === 'technical' ? 'energy' : 
+                    key === 'analytics' ? 'particle' : 'core'}-600` : 'text-white'}
+                  transition-colors 
+                  duration-300
+                `}>
+                  {category.icon}
+                </div>
+                <h3 className="text-lg font-semibold mt-4 mb-2 text-white">
+                  {category.title}
+                </h3>
+                <p className="text-sm text-white/80">
+                  {category.description}
+                </p>
+              </button>
+            ))}
+          </div>
+
+          {/* Skills Grid */}
+          {activeCategory && (
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              {categories[activeCategory].skills.map((skill, index) => (
+                <SkillCard 
+                  key={`${activeCategory}-${index}`}
+                  skill={skill}
+                  categoryId={activeCategory}
+                  skillIndex={index}
+                />
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
+    </section>
   );
 }

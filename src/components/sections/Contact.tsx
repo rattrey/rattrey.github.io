@@ -1,5 +1,6 @@
 import React from 'react';
 import { Mail, Linkedin, Github, FileText } from 'lucide-react';
+import { theme, classes } from '../../utils/theme';
 
 const ContactSection = () => {
   const contactLinks = [
@@ -46,7 +47,7 @@ const ContactSection = () => {
             href={link.href}
             target="_blank"
             rel="noopener noreferrer"
-            className={`group flex items-start gap-4 p-6 ${theme.card.base} ${theme.card.border} ${theme.card.hover}`}
+            className={`group flex items-start gap-4 p-6 ${theme.card.base} ${theme.card.hover}`}
           >
             <div className={`p-3 rounded-lg bg-accent-primary/10 text-accent-light`}>
               {link.icon}

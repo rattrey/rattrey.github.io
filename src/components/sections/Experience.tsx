@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
 import { Building2, Calendar, ArrowRight, TrendingUp, Users, Code2, Lightbulb } from 'lucide-react';
-import { theme, classes } from '../../utils/theme'; 
 
 // Impact type definition
 type ImpactType = 'high' | 'medium' | 'standard';
@@ -160,12 +159,12 @@ const TimelineVisualization = () => {
         {timelineRoles.map((role, index) => (
           <div key={index} className="flex items-center">
             <div className="flex flex-col items-center">
-              <div className={theme.timeline.dot} />
-              <div className={`${theme.timeline.text.primary} mt-2`}>{role.period}</div>
-              <div className={theme.timeline.text.secondary}>{role.company}</div>
+              <div className="w-3 h-3 rounded-full bg-[#373373]" />
+              <div className="text-sm text-gray-600 mt-2 whitespace-nowrap">{role.period}</div>
+              <div className="text-xs text-gray-500 whitespace-nowrap">{role.company}</div>
             </div>
             {index < timelineRoles.length - 1 && (
-              <div className={`${theme.timeline.line} mx-2`} />
+              <div className="w-24 h-px bg-gray-200 mx-2" />
             )}
           </div>
         ))}
@@ -200,10 +199,10 @@ const ExperienceSection = () => {
   }, []);
 
   return (
-    <div className={`${classes.sectionPadding}`} ref={sectionRef}>
+    <div className="py-20" ref={sectionRef}>
       <div className="text-center mb-16">
-        <h2 className={`${classes.heading.h2} ${theme.colors.text.primary} mb-4`}>Professional Experience</h2>
-        <p className={`text-lg ${theme.colors.text.secondary} max-w-3xl mx-auto`}>
+        <h2 className="text-3xl font-bold text-gray-900 mb-4">Professional Experience</h2>
+        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
           Progressive experience in analytics leadership, technical implementation, and data strategy.
         </p>
       </div>
@@ -222,12 +221,12 @@ const ExperienceSection = () => {
                 <div className="absolute left-8 top-20 bottom-0 w-px bg-gray-200" />
               )}
               
-              <div className={`${theme.card.base} ${theme.card.border} ${theme.card.hover} p-8`}>
+              <div className="bg-white rounded-xl shadow-md p-8">
                 {/* Role Header */}
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
                   <div>
-                    <h3 className={`${classes.heading.h3} ${theme.colors.text.primary}`}>{role.title}</h3>
-                    <div className={`flex items-center gap-2 mt-2 ${theme.colors.text.secondary}`}>
+                    <h3 className="text-xl font-semibold text-gray-900">{role.title}</h3>
+                    <div className="flex items-center gap-2 mt-2 text-gray-600">
                       <Building2 className="w-4 h-4" />
                       <span>{role.company}</span>
                       <span className="text-gray-300">•</span>
@@ -235,13 +234,13 @@ const ExperienceSection = () => {
                     </div>
                   </div>
                   <div className="flex items-center gap-2 mt-2 md:mt-0">
-                    <Calendar className={`w-4 h-4 ${theme.colors.text.secondary}`} />
-                    <span className={theme.colors.text.secondary}>{role.period}</span>
+                    <Calendar className="w-4 h-4 text-gray-400" />
+                    <span className="text-gray-600">{role.period}</span>
                   </div>
                 </div>
 
                 {/* Description */}
-                <p className={`${theme.colors.text.secondary} mb-6 leading-relaxed`}>{role.description}</p>
+                <p className="text-gray-600 mb-6 leading-relaxed">{role.description}</p>
 
                 {/* Achievements with Impact Indicators */}
                 <div className="space-y-4">
@@ -252,7 +251,7 @@ const ExperienceSection = () => {
                       }`}>
                         {getImpactIcon(achievement.impact.category)}
                       </div>
-                      <span className={`${theme.colors.text.secondary} flex-1`}>{achievement.text}</span>
+                      <span className="text-gray-700 flex-1">{achievement.text}</span>
                     </div>
                   ))}
                 </div>

@@ -2,47 +2,107 @@
 
 export const theme = {
     colors: {
-      // Core colors representing data relationships and intelligence
-      primary: {
-        900: '#0F172A',  // Darkest - for backgrounds
-        800: '#1E293B',  // For cards and sections
-        700: '#334155',  // For hover states
-        600: '#475569'   // For lighter elements
-      },
-      // Accent colors representing intelligence and data flow
-      accent: {
-        primary: '#06B6D4',    // Main accent
-        secondary: '#22D3EE',  // Secondary accent
-        light: '#67E8F9',      // Highlights
-        dark: '#0891B2'        // Deep accents
-      },
-      // Functional colors for UI elements
-      state: {
-        success: '#10B981',  // Success states
-        warning: '#F59E0B',  // Warning states
-        error: '#EF4444',    // Error states
-        info: '#3B82F6'      // Information states
-      },
-      // Text colors
+      // Core colors - Refined for deep navy professional look
+
+        // Core colors - Deep space-inspired navy/teal base
+        primary: {
+        950: '#0a192f',  // Darkest deep space blue
+        900: '#0f2942',  // Deep background
+        800: '#163755',  // Container backgrounds
+        700: '#1d4468',  // Active states
+        600: '#24527b',  // Interactive elements
+        500: '#2b608e',  // Mid-tone elements
+        400: '#3d7cb2',  // Subtle highlights
+        300: '#5089bd',  // Muted interactive
+        200: '#7dacd4',  // Subtle emphasis
+        100: '#b3cde6',  // Light accents
+        50: '#e5f0f9',   // Lightest shade
+        },
+
+        
+    
+        // Accent colors - Atomic glow inspired
+        accent: {
+        core: {
+            600: '#ff7b24',  // Vibrant atomic core
+            500: '#ff8e44',  // Primary hover
+            400: '#ffa366',  // Active state
+            300: '#ffb788',  // Subtle accents
+        },
+        energy: {
+            600: '#00b4d8',  // Electric blue
+            500: '#48cae4',  // Hover state
+            400: '#90e0ef',  // Active state
+            300: '#ade8f4',  // Subtle variant
+        },
+        particle: {
+            600: '#ffd700',  // Particle glow
+            500: '#ffdd33',  // Hover state
+            400: '#ffe566',  // Active state
+            300: '#fff1a8',  // Subtle variant
+        }
+        },
+        
+    
+  
+      // Text colors - Enhanced for readability on navy
       text: {
-        primary: '#F8FAFC',     // Primary text on dark
-        secondary: '#CBD5E1',   // Secondary text on dark
-        dark: '#0F172A',        // Dark text on light
-        muted: '#64748B'        // Muted text
+        primary: '#ffffff',     // Pure white
+        secondary: '#e2e8f0',   // Soft light
+        tertiary: '#cbd5e1',    // Star dust
+        inverse: '#0f2942',     // Deep space
+        muted: 'rgba(255, 255, 255, 0.85)',
       },
-      // Background gradients
+  
+      // Data visualization palette optimized for navy background
+      data: {
+        visualization: {
+          primary: ['#0ea5d9', '#22b8ed', '#47c7f3', '#7dd7f7'],    // Blues
+          secondary: ['#2563eb', '#3b82f6', '#60a5fa', '#93c5fd'],   // Royal blues
+          tertiary: ['#8b5cf6', '#a78bfa', '#c4b5fd', '#ddd6fe'],    // Purples
+          categorical: [
+            '#0ea5d9',  // Bright blue
+            '#2563eb',  // Royal blue
+            '#8b5cf6',  // Purple
+            '#ec4899',  // Pink
+            '#f59e0b',  // Amber
+            '#10b981',  // Emerald
+          ],
+        },
+      },
+  
+      // Gradient system refined for navy base
       gradients: {
-        primary: 'from-[#0F172A] via-[#1E293B] to-[#0F172A]',
-        accent: 'from-[#06B6D4] via-[#0891B2] to-[#0F172A]'
+        primary: 'bg-gradient-to-b from-[#0a192f] via-[#0f2942] to-[#0a192f] w-full',  // Space background
+        atomic: 'bg-gradient-to-b from-[#ff7b24] via-[#ff8e44] to-[#0f2942] w-full',   // Atomic glow
+        energy: 'bg-gradient-to-b from-[#00b4d8] via-[#48cae4] to-[#0f2942] w-full',   // Energy field
+        particle: 'bg-gradient-to-b from-[#ffd700] via-[#ffdd33] to-[#0f2942] w-full', // Particle trail
+        surface: 'bg-gradient-to-b from-primary-800/95 to-primary-800/85',      // Card surfaces
+        glow: 'bg-gradient-to-b from-accent-core-600/20 via-accent-core-400/10 to-transparent', // Ethereal glow
+      },
+      // State colors
+      state: {
+        success: '#22c55e',  // Nature green
+        warning: '#fbbf24',  // Solar yellow
+        error: '#ef4444',    // Red alert
+        info: '#00b4d8',     // Info blue
       }
     },
-    // Animation timings representing data flow
+    
+  
+    opacity: {
+      hover: '0.8',
+      active: '0.9',
+      disabled: '0.5',
+      overlay: '0.7',
+    },
+  
     animation: {
       fast: '300ms',
       medium: '500ms',
       slow: '800ms'
     },
-    // Spacing and layout
+  
     layout: {
       maxWidth: 'max-w-7xl',
       padding: {
@@ -50,6 +110,24 @@ export const theme = {
         y: 'py-20'
       }
     },
+  
+    elevation: {
+      1: 'shadow-sm',
+      2: 'shadow',
+      3: 'shadow-md',
+      4: 'shadow-lg',
+      5: 'shadow-xl',
+    },
+
+    effects: {
+        glow: {
+          core: 'shadow-lg shadow-accent-core-600/50',
+          energy: 'shadow-lg shadow-accent-energy-600/50',
+          particle: 'shadow-lg shadow-accent-particle-600/50',
+        },
+        glass: 'backdrop-blur-sm bg-white/10',
+      },
+  
     // Category-specific styles
     categories: {
       technical: {
@@ -77,34 +155,39 @@ export const theme = {
         hover: "hover:bg-primary-800/20"
       }
     },
+  
     // Card styles
     card: {
-      base: "bg-primary-800 rounded-xl shadow-md hover:shadow-lg transition-all duration-300",
-      border: "border border-accent-primary/10",
-      hover: "hover:border-accent-primary/20"
-    },
-    // Timeline styles
-    timeline: {
-      dot: "w-3 h-3 rounded-full bg-accent-primary",
-      line: "w-24 h-px bg-accent-primary/20",
-      text: {
-        primary: "text-sm text-accent-light whitespace-nowrap",
-        secondary: "text-xs text-accent-primary/80 whitespace-nowrap"
-      }
-    },
+        base: "backdrop-blur-sm bg-white/10 rounded-xl transition-all duration-300",
+        border: "border border-white/10",
+        hover: "hover:bg-white/15 hover:border-white/20 hover:shadow-lg hover:shadow-accent-core-600/20",
+        glow: "shadow-lg shadow-accent-core-600/20",
+      },
+    
+      // Timeline with particle effects
+      timeline: {
+        dot: "w-3 h-3 rounded-full bg-accent-core-600 shadow-lg shadow-accent-core-600/50",
+        line: "w-24 h-px bg-accent-core-600/20",
+        text: {
+          primary: "text-sm text-white whitespace-nowrap",
+          secondary: "text-xs text-accent-core-300 whitespace-nowrap"
+        }
+      },
     // Component-specific styles
     components: {
-      expertiseBadge: {
-        expert: "bg-accent-primary/20 text-accent-light",
-        advanced: "bg-accent-secondary/20 text-accent-secondary",
-        intermediate: "bg-primary-600/20 text-accent-light"
-      },
-      tag: {
-        base: "px-3 py-1.5 rounded-full text-sm",
-        primary: "bg-primary-700/50 text-accent-light",
-        accent: "bg-accent-primary/10 text-accent-light"
+        expertiseBadge: {
+          expert: "bg-accent-core-600/20 text-accent-core-300 shadow-sm shadow-accent-core-600/30",
+          advanced: "bg-accent-energy-600/20 text-accent-energy-300 shadow-sm shadow-accent-energy-600/30",
+          intermediate: "bg-primary-600/20 text-primary-100 shadow-sm shadow-primary-600/30"
+        },
+        tag: {
+          base: "px-3 py-1.5 rounded-full text-sm",
+          primary: "bg-primary-700/50 text-primary-100",
+          accent: "bg-accent-core-600/10 text-accent-core-300"
+        }
       }
-    }
+
+    
   };
   
   // Common Tailwind class combinations
@@ -118,7 +201,6 @@ export const theme = {
       h2: 'text-3xl font-bold',
       h3: 'text-xl font-semibold'
     },
-    // Additional common combinations
     section: {
       wrapper: 'min-h-screen py-20',
       inner: 'max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'

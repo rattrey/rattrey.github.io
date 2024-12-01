@@ -37,24 +37,21 @@ const Hero = () => {
   }, []);
 
   return (
-    <section 
-      id="home" 
-      className={`min-h-screen relative bg-gradient-to-br from-primary-900 via-primary-800 to-primary-900`}
-    >
+  <section id="home" className={`min-h-screen relative ${theme.colors.gradients.primary}`}>
       <div className={classes.container}>
         <div className="h-[calc(100vh-80px)] flex flex-col justify-center">
           <div className="space-y-12">
             {/* Header Section */}
             <div className={`space-y-6 text-center transform transition-all duration-${theme.animation.slow} 
               ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-              <h1 className={`${classes.heading.h1} text-accent-light`}>
+              <h1 className={`${classes.heading.h1} text-accent-core-600`}>
                 Rohin Attrey
               </h1>
-              <h2 className="text-2xl text-accent-primary">
-                Product & Advanced Analytics Leader
+              <h2 className="text-2xl text-white">
+                Analytics Professional & Data Scientist
               </h2>
-              <p className={`text-lg ${theme.colors.text.secondary} max-w-2xl mx-auto`}>
-                Building and leading analytics teams to drive product growth through 
+              <p className="text-lg text-white max-w-2xl mx-auto">
+                Building and leading analytics teams to deliver organization growth through 
                 experimentation, insights, and data-driven strategy.
               </p>
             </div>
@@ -65,18 +62,17 @@ const Hero = () => {
               {impactMetrics.map((metric, index) => (
                 <div 
                   key={metric.title}
-                  className={`bg-primary-800/50 backdrop-blur-sm rounded-lg p-6 transform transition-all duration-500
-                    hover:bg-primary-700/50 hover:transform hover:scale-105 border border-accent-primary/20
+                  className={`${theme.card.base} ${theme.card.hover} p-6 transform transition-all duration-500
                     ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
                   style={{ transitionDelay: `${index * 100}ms` }}
                 >
-                  <div className="text-accent-primary mb-4">
+                  <div className="text-accent-core-600 mb-4">
                     {metric.icon}
                   </div>
                   <div className="space-y-2">
-                    <h3 className="text-accent-light font-semibold">{metric.title}</h3>
-                    <p className="text-2xl font-bold text-accent-primary">{metric.value}</p>
-                    <p className={`text-sm ${theme.colors.text.secondary}`}>{metric.description}</p>
+                    <h3 className="text-white font-semibold">{metric.title}</h3>
+                    <p className="text-2xl font-bold text-accent-core-600">{metric.value}</p>
+                    <p className="text-sm text-white">{metric.description}</p>
                   </div>
                 </div>
               ))}
@@ -85,10 +81,10 @@ const Hero = () => {
             {/* Current Role */}
             <div className={`text-center transform transition-all duration-${theme.animation.slow} delay-700
               ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-              <div className="inline-block bg-primary-800/50 backdrop-blur-sm rounded-full px-6 py-3 border border-accent-primary/20">
-                <p className={theme.colors.text.primary}>
+              <div className={`inline-block ${theme.card.base} rounded-full px-6 py-3`}>
+                <p className="text-white">
                   Currently leading Product & Analytics at{' '}
-                  <span className="font-semibold text-accent-primary">Kijiji</span>
+                  <span className="font-semibold text-accent-core-600">Kijiji</span>
                 </p>
               </div>
             </div>
