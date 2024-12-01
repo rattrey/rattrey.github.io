@@ -33,7 +33,7 @@ const ContactSection = () => {
   return (
     <section id="contact" className={theme.section.wrapper}>
       <div className={`${theme.section.background.hero} w-full h-full`}>
-        <div className={theme.section.inner}>
+        <div className={`${theme.section.inner} relative z-10`}>
           <div className="text-center mb-12">
             <h2 className={`${classes.heading.h2} text-accent-core-600 mb-4`}>
               Get In Touch
