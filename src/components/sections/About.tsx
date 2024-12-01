@@ -46,7 +46,7 @@ const About: React.FC = () => {
               a Master's degree specialty in Business Analytics. 
             </p>
 
-            <p className="text-white">
+            <p className="text-gray-700">
               My first role was at Loblaw Companies Limited, where I developed pricing models and 
               automated processes using tools like VBA, creating tools that were adopted across analytics teams. 
               I later moved into consumer insights, where I developed core measurement methodologies for in-app loyalty testing, working on user segmentation and retention analysis among others.
@@ -55,14 +55,14 @@ const About: React.FC = () => {
               during this part of my role and developed a passion for data engineering.
             </p>
 
-            <p className="text-white">
+            <p className="text-gray-700">
               Now at Kijiji as Manager of Analytics & Strategy, I work to advance our 
               data infrastructure and analytics frameworks. My work spans ETL architecture, 
               driver tree analysis, KPI frameworks, and product analytics; supporting teams across the 
               organization with data-driven solutions.
             </p>
 
-            <p className="text-white">
+            <p className="text-gray-700">
               I love solving complex problems by connecting the dots between data, technology, and business needs. At every organization I've worked with, 
               I've focused on understanding the common goals, current data needs, and the limitations. This allows me to make a determination on the best 
               analytical model or approach. This has led to building tools and frameworks that teams want to use.
