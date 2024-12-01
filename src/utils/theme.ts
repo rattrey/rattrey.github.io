@@ -1,6 +1,11 @@
 // utils/theme.ts
 
 export const theme = {
+  section: {
+    wrapper: 'min-h-screen py-20 w-full',
+    inner: 'max-w-7xl mx-auto px-4 sm:px-6 lg:px-8',
+    background: 'relative w-full bg-gradient-to-b from-primary-950 via-primary-900 to-primary-950'
+  },
     colors: {
       // Core colors - Refined for deep navy professional look
 
@@ -200,11 +205,6 @@ export const theme = {
       h1: 'text-5xl font-bold',
       h2: 'text-3xl font-bold',
       h3: 'text-xl font-semibold'
-    },
-    section: {
-      wrapper: 'min-h-screen py-20 w-full',
-      inner: 'max-w-7xl mx-auto px-4 sm:px-6 lg:px-8',
-      background: 'relative w-full bg-gradient-to-b from-primary-950 via-primary-900 to-primary-950'
     },
     animation: {
       fadeIn: `transition-all duration-${theme.animation.medium}`,
