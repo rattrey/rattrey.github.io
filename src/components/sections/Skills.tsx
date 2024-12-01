@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Code2, ChartBar, Users, Briefcase, Timer, CheckCircle2, Database } from 'lucide-react';
-
+import { theme, classes } from '../../utils/theme';
 
 // Types based on your existing data structure
 interface CaseStudy {
