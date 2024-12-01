@@ -84,8 +84,8 @@ const Navigation = () => {
               className="hover:opacity-80 transition-opacity"
             >
               <img 
-                src="/images/logo.jpg" 
-                alt="RA Logo" 
+                src="/images/atom.jpg" 
+                alt="Atom Logo" 
                 className="h-8 w-8 rounded-full object-cover"
               />
             </button>
