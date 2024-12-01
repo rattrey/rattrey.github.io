@@ -31,41 +31,51 @@ const ContactSection = () => {
   ];
 
   return (
-    <div className={`${classes.sectionPadding}`}>
-      <div className="text-center mb-12">
-        <h2 className={`${classes.heading.h2} ${theme.colors.text.primary} mb-4`}>Get In Touch</h2>
-        <p className={`text-lg ${theme.colors.text.secondary} max-w-2xl mx-auto`}>
-          I'm always interested in discussing data strategy, analytics leadership, 
-          and technical architecture opportunities.
-        </p>
-      </div>
+    <section id="contact" className={theme.section.wrapper}>
+      <div className={`${theme.section.background.default} w-full h-full bg-primary-950`}>
+        <div className={theme.section.inner}>
+          <div className="text-center mb-12">
+            <h2 className={`${classes.heading.h2} text-accent-core-600 mb-4`}>
+              Get In Touch
+            </h2>
+            <p className="text-lg text-white max-w-2xl mx-auto">
+              I'm always interested in discussing data strategy, analytics leadership, 
+              and technical architecture opportunities.
+            </p>
+          </div>
 
-      <div className={`${classes.container} grid grid-cols-1 md:grid-cols-2 gap-6`}>
-        {contactLinks.map((link) => (
-          <a
-            key={link.label}
-            href={link.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`group flex items-start gap-4 p-6 ${theme.card.base} ${theme.card.hover}`}
-          >
-            <div className={`p-3 rounded-lg bg-accent-primary/10 text-accent-light`}>
-              {link.icon}
-            </div>
-            <div>
-              <h3 className={`font-semibold ${theme.colors.text.primary} mb-1 group-hover:text-accent-light transition-colors`}>
-                {link.label}
-              </h3>
-              <p className={`${theme.colors.text.secondary} text-sm`}>{link.description}</p>
-            </div>
-          </a>
-        ))}
-      </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {contactLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${theme.card.base} ${theme.card.hover} p-6 flex items-start gap-4 transition-all duration-300`}
+              >
+                <div className="p-3 rounded-lg bg-accent-core-600/10">
+                  <div className="text-accent-core-600">
+                    {link.icon}
+                  </div>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-white mb-1 group-hover:text-accent-core-300 transition-colors">
+                    {link.label}
+                  </h3>
+                  <p className="text-white/80 text-sm">
+                    {link.description}
+                  </p>
+                </div>
+              </a>
+            ))}
+          </div>
 
-      <div className={`mt-16 text-center ${theme.colors.text.secondary}`}>
-        <p>Based in Toronto, Ontario</p>
+          <div className="mt-16 text-center text-white/80">
+            <p>Based in Toronto, Ontario</p>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
