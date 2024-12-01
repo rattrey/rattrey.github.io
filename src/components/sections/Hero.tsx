@@ -92,7 +92,8 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
   );
 };
 
