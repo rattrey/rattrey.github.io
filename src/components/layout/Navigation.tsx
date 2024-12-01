@@ -81,9 +81,13 @@ const Navigation = () => {
           <div className="flex-shrink-0">
             <button
               onClick={() => scrollToSection('home')}
-              className={`${theme.colors.text.primary} text-xl font-bold hover:opacity-80 transition-opacity`}
+              className="hover:opacity-80 transition-opacity"
             >
-              RA
+              <img 
+                src="/images/logo.jpg" 
+                alt="RA Logo" 
+                className="h-8 w-8 rounded-full object-cover"
+              />
             </button>
           </div>
 
