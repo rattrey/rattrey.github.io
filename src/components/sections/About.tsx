@@ -27,8 +27,9 @@ const About: React.FC = () => {
   ];
 
   return (
-    <section id="about" className={`${theme.section.background} ${theme.section.wrapper}`}>
-      <div className={theme.section.inner}>
+    <section id="about" className={theme.section.wrapper}>
+      <div className={`${theme.section.background} w-full h-full`}>
+        <div className={theme.section.inner}>
         <div className="text-center mb-16">
           <h2 className={`${classes.heading.h2} text-accent-core-600 mb-4`}>About Me</h2>
           <p className="text-lg text-white max-w-3xl mx-auto">

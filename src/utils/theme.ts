@@ -2,9 +2,9 @@
 
 export const theme = {
   section: {
-    wrapper: 'min-h-screen py-20 w-full',
-    inner: 'max-w-7xl mx-auto px-4 sm:px-6 lg:px-8',
-    background: 'relative w-full bg-gradient-to-b from-primary-950 via-primary-900 to-primary-950'
+    wrapper: 'w-full min-h-screen flex flex-col',
+    inner: 'flex-1 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20',
+    background: 'bg-gradient-to-b from-primary-950 via-primary-900 to-primary-950'
   },
     colors: {
       // Core colors - Refined for deep navy professional look
