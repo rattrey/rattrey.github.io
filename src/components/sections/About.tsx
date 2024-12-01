@@ -69,8 +69,15 @@ const About: React.FC = () => {
             </p>
           </div>
 
-          {/* Highlights Grid */}
-          <div className="grid grid-cols-1 gap-4">
+          {/* Image and Highlights */}
+          <div className="space-y-8">
+            {/* Profile Image */}
+            <div className="aspect-square w-full max-w-md mx-auto rounded-xl border-2 border-dashed border-accent-core-600/30 flex items-center justify-center bg-accent-core-600/10">
+              <span className="text-accent-core-600/50 text-lg">Profile Image Coming Soon</span>
+            </div>
+
+            {/* Highlights Grid */}
+            <div className="grid grid-cols-1 gap-4">
             {highlights.map((highlight) => (
               <div
                 key={highlight.title}
