@@ -346,7 +346,7 @@ export default function EnhancedSkillsSection() {
                   p-6 
                   ${theme.card.dark.hover}
                   ${activeCategory === key ? 
-                    `${theme.effects.glass} ${theme.effects.glow[key === 'technical' ? 'energy' : 
+                    `${theme.card.dark.base} ${theme.effects.glow[key === 'technical' ? 'energy' : 
                       key === 'analytics' ? 'particle' : 'core']}` : 
                     ''}
                   ${activeCategory && activeCategory !== key ? 'opacity-75' : 'opacity-100'}
