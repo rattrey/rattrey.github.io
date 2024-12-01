@@ -37,8 +37,8 @@ const Hero = () => {
   }, []);
 
   return (
-  <section id="home" className={`min-h-screen relative ${theme.colors.gradients.primary}`}>
-      <div className={classes.container}>
+  <section id="home" className={`${theme.section.background} ${theme.section.wrapper}`}>
+      <div className={theme.section.inner}>
         <div className="h-[calc(100vh-80px)] flex flex-col justify-center">
           <div className="space-y-12">
             {/* Header Section */}
