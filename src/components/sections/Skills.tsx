@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Code2, ChartBar, Users, Briefcase, Timer, CheckCircle2, Database } from 'lucide-react';
 import { theme, classes } from '../../utils/theme';
-import { expertiseLevelToKey } from '../../types/skills';
+import { expertiseLevelToKey, ExpertiseLevel } from '../../types/skills';
 
 // Types based on your existing data structure
 interface CaseStudy {
@@ -14,7 +14,7 @@ interface Skill {
   name: string;
   yearsExperience: number;
   currentlyUsing: boolean;
-  expertise: string;
+  expertise: ExpertiseLevel;
   applications: string[];
   caseStudy: CaseStudy;
   relatedSkills: string[];
