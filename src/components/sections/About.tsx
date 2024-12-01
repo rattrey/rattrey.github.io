@@ -1,5 +1,6 @@
 import React from 'react';
 import { LineChart, Users, Brain, Rocket } from 'lucide-react';
+import { theme, classes } from '../../utils/theme';
 
 const About: React.FC = () => {
   const highlights = [
@@ -26,10 +27,11 @@ const About: React.FC = () => {
   ];
 
   return (
-    <div>
-      <div className="text-center mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">About Me</h2>
-        <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+    <section id="about" className={`${classes.section.wrapper}`}>
+      <div className={classes.section.inner}>
+        <div className="text-center mb-16">
+          <h2 className={`${classes.heading.h2} ${theme.colors.text.primary} mb-4`}>About Me</h2>
+          <p className={`text-lg ${theme.colors.text.secondary} max-w-3xl mx-auto`}>
           Analytics leader focused on building effective teams and data solutions.
         </p>
       </div>
