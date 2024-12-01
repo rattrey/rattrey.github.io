@@ -83,6 +83,15 @@ export const theme = {
       border: "border border-accent-primary/10",
       hover: "hover:border-accent-primary/20"
     },
+    // Timeline styles
+    timeline: {
+      dot: "w-3 h-3 rounded-full bg-accent-primary",
+      line: "w-24 h-px bg-accent-primary/20",
+      text: {
+        primary: "text-sm text-accent-light whitespace-nowrap",
+        secondary: "text-xs text-accent-primary/80 whitespace-nowrap"
+      }
+    },
     // Component-specific styles
     components: {
       expertiseBadge: {

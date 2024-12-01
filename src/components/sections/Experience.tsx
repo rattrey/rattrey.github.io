@@ -160,12 +160,12 @@ const TimelineVisualization = () => {
         {timelineRoles.map((role, index) => (
           <div key={index} className="flex items-center">
             <div className="flex flex-col items-center">
-              <div className="w-3 h-3 rounded-full bg-[#373373]" />
-              <div className="text-sm text-gray-600 mt-2 whitespace-nowrap">{role.period}</div>
-              <div className="text-xs text-gray-500 whitespace-nowrap">{role.company}</div>
+              <div className={theme.timeline.dot} />
+              <div className={`${theme.timeline.text.primary} mt-2`}>{role.period}</div>
+              <div className={theme.timeline.text.secondary}>{role.company}</div>
             </div>
             {index < timelineRoles.length - 1 && (
-              <div className="w-24 h-px bg-gray-200 mx-2" />
+              <div className={`${theme.timeline.line} mx-2`} />
             )}
           </div>
         ))}
