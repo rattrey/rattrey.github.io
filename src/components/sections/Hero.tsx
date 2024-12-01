@@ -38,7 +38,7 @@ const Hero = () => {
 
   return (
   <section id="home" className={theme.section.wrapper}>
-    <div className={`${theme.section.background} w-full h-full`}>
+    <div className={`${theme.section.background.hero} w-full h-full`}>
       <div className={theme.section.inner}>
         <div className="h-[calc(100vh-80px)] flex flex-col justify-center">
           <div className="space-y-12">
