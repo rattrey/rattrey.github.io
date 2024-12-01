@@ -236,21 +236,18 @@ const SkillCard: React.FC<{
   const cardId = `${categoryId}-${skillIndex}`;
 
   return (
-    <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
+    <div className={`${theme.card.base} ${theme.card.border} ${theme.card.hover}`}>
       <div className="p-8">
         {/* Header Section */}
         <div className="space-y-4 mb-6">
           <div className="flex justify-between items-start">
-            <h3 className="text-xl font-semibold text-gray-900">{skill.name}</h3>
-            <span className={`px-3 py-1 rounded-full text-sm font-medium 
-              ${skill.expertise === 'Expert' ? 'bg-blue-100 text-blue-800' : 
-              skill.expertise === 'Advanced' ? 'bg-green-100 text-green-800' : 
-              'bg-gray-100 text-gray-800'}`}>
+            <h3 className={`${classes.heading.h3} ${theme.colors.text.primary}`}>{skill.name}</h3>
+            <span className={`${theme.components.expertiseBadge[skill.expertise.toLowerCase()]} ${theme.components.tag.base}`}>
               {skill.expertise}
             </span>
           </div>
           
-          <div className="flex items-center gap-3 text-sm text-gray-600">
+          <div className={`flex items-center gap-3 text-sm ${theme.colors.text.secondary}`}>
             <div className="flex items-center gap-1.5">
               <Timer className="w-4 h-4" />
               <span>{skill.yearsExperience}+ years</span>
@@ -266,12 +263,12 @@ const SkillCard: React.FC<{
 
         {/* Applications Section */}
         <div className="mb-6">
-          <h4 className="text-sm font-medium text-gray-700 mb-3">Key Applications</h4>
+          <h4 className={`text-sm font-medium ${theme.colors.text.primary} mb-3`}>Key Applications</h4>
           <div className="flex flex-wrap gap-2">
             {skill.applications.map(app => (
               <span 
                 key={`${cardId}-${app}`} 
-                className="px-3 py-1.5 bg-gray-50 text-gray-700 rounded-full text-sm"
+                className={`${theme.components.tag.base} ${theme.components.tag.primary}`}
               >
                 {app}
               </span>
@@ -280,27 +277,27 @@ const SkillCard: React.FC<{
         </div>
 
         {/* Case Study Section */}
-        <div className="bg-gray-50 rounded-lg p-6 mb-6">
-          <h4 className="text-lg font-medium text-gray-900 mb-3">
+        <div className={`bg-primary-800/50 rounded-lg p-6 mb-6`}>
+          <h4 className={`text-lg font-medium ${theme.colors.text.primary} mb-3`}>
             {skill.caseStudy.project}
           </h4>
-          <p className="text-gray-600 mb-4 leading-relaxed">
+          <p className={`${theme.colors.text.secondary} mb-4 leading-relaxed`}>
             {skill.caseStudy.description}
           </p>
-          <div className="flex items-start gap-2 bg-white p-3 rounded-lg">
-            <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-            <p className="text-gray-700 text-sm leading-relaxed">{skill.caseStudy.impact}</p>
+          <div className={`flex items-start gap-2 bg-primary-700/50 p-3 rounded-lg`}>
+            <CheckCircle2 className="w-5 h-5 text-accent-light flex-shrink-0 mt-0.5" />
+            <p className={`${theme.colors.text.primary} text-sm leading-relaxed`}>{skill.caseStudy.impact}</p>
           </div>
         </div>
 
         {/* Related Skills Section */}
         <div>
-          <h4 className="text-sm font-medium text-gray-700 mb-3">Related Skills</h4>
+          <h4 className={`text-sm font-medium ${theme.colors.text.primary} mb-3`}>Related Skills</h4>
           <div className="flex flex-wrap gap-2">
             {skill.relatedSkills.map(related => (
               <span 
                 key={`${cardId}-${related}`} 
-                className="px-3 py-1.5 bg-blue-50 text-blue-700 rounded-lg text-sm"
+                className={`${theme.components.tag.base} ${theme.components.tag.accent}`}
               >
                 {related}
               </span>
