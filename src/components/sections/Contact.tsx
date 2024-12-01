@@ -32,19 +32,19 @@ const ContactSection = () => {
 
   return (
     <section id="contact" className={theme.section.wrapper}>
-      <div className={`${theme.section.background.default} w-full h-full bg-primary-950`}>
+      <div className={`${theme.section.background.hero} w-full h-full`}>
         <div className={theme.section.inner}>
           <div className="text-center mb-12">
             <h2 className={`${classes.heading.h2} text-accent-core-600 mb-4`}>
               Get In Touch
             </h2>
-            <p className="text-lg text-white max-w-2xl mx-auto">
+            <p className="text-lg text-white/80 max-w-2xl mx-auto">
               I'm always interested in discussing data strategy, analytics leadership, 
               and technical architecture opportunities.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto mb-16">
             {contactLinks.map((link) => (
               <a
                 key={link.label}
