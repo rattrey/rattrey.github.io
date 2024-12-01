@@ -32,9 +32,9 @@ const About: React.FC = () => {
         <div className="text-center mb-16">
           <h2 className={`${classes.heading.h2} ${theme.colors.text.primary} mb-4`}>About Me</h2>
           <p className={`text-lg ${theme.colors.text.secondary} max-w-3xl mx-auto`}>
-          Analytics leader focused on building effective teams and data solutions.
-        </p>
-      </div>
+            Analytics leader focused on building effective teams and data solutions.
+          </p>
+        </div>
 
       <div className="grid md:grid-cols-2 gap-12 items-center"> {/* Changed from items-start to items-center */}
         {/* Main Content */}
@@ -69,12 +69,11 @@ const About: React.FC = () => {
             I love solving complex problems by connecting the dots between data, technology, and business needs. At every organization I've worked with, 
             I've focused on understanding the common goals, current data needs, and the limitations. This allows me to make a determination on the best 
             analytical model or approach. This has led to building tools and frameworks that teams want to use.
-            
           </p>
         </div>
 
         {/* Highlights Grid */}
-        <div className="grid grid-cols-1 gap-6 h-fit"> {/* Added h-fit to ensure proper alignment */}
+        <div className="grid grid-cols-1 gap-6 h-fit">
           {highlights.map((highlight, index) => (
             <div 
               key={highlight.title}
