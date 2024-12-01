@@ -2,7 +2,12 @@ import { ReactElement } from 'react';
 
 export type CategoryId = 'technical' | 'analytics' | 'leadership' | 'business';
 
+export type ExpertiseLevelKey = 'expert' | 'advanced' | 'intermediate';
 export type ExpertiseLevel = 'Expert' | 'Advanced' | 'Intermediate';
+
+export const expertiseLevelToKey = (level: ExpertiseLevel): ExpertiseLevelKey => {
+    return level.toLowerCase() as ExpertiseLevelKey;
+};
 
 export interface CaseStudy {
   project: string;

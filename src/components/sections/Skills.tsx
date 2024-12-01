@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Code2, ChartBar, Users, Briefcase, Timer, CheckCircle2, Database } from 'lucide-react';
 import { theme, classes } from '../../utils/theme';
+import { expertiseLevelToKey } from '../../types/skills';
 
 // Types based on your existing data structure
 interface CaseStudy {
@@ -242,7 +243,7 @@ const SkillCard: React.FC<{
         <div className="space-y-4 mb-6">
           <div className="flex justify-between items-start">
             <h3 className={`${classes.heading.h3} ${theme.colors.text.primary}`}>{skill.name}</h3>
-            <span className={`${theme.components.expertiseBadge[skill.expertise.toLowerCase()]} ${theme.components.tag.base}`}>
+            <span className={`${theme.components.expertiseBadge[expertiseLevelToKey(skill.expertise)]} ${theme.components.tag.base}`}>
               {skill.expertise}
             </span>
           </div>
