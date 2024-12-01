@@ -93,10 +93,10 @@ const Navigation = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`text-sm transition-all px-3 py-2 rounded-md ${
+                className={`text-sm transition-all px-3 py-2 rounded-md text-white font-semibold ${
                   activeSection === item.id
-                    ? `${theme.colors.text.primary} font-semibold`
-                    : `${theme.colors.text.secondary} hover:text-accent-light`
+                    ? 'opacity-100'
+                    : 'opacity-70 hover:opacity-100'
                 }`}
               >
                 {item.label}
@@ -127,10 +127,10 @@ const Navigation = () => {
             <button
               key={item.id}
               onClick={() => scrollToSection(item.id)}
-              className={`block w-full text-left px-3 py-2 rounded-md text-base ${
+              className={`block w-full text-left px-3 py-2 rounded-md text-base text-white font-semibold ${
                 activeSection === item.id
-                  ? `${theme.colors.text.primary} font-semibold bg-accent-primary/10`
-                  : `${theme.colors.text.secondary} hover:text-accent-light hover:bg-white/5`
+                  ? 'opacity-100 bg-white/10'
+                  : 'opacity-70 hover:opacity-100 hover:bg-white/5'
               }`}
             >
               {item.label}
