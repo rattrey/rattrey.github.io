@@ -322,7 +322,7 @@ export default function EnhancedSkillsSection() {
   const [activeCategory, setActiveCategory] = useState<CategoryId | null>('technical');
 
   return (
-    <section className={`w-full min-h-screen py-20 bg-white`}>
+    <section className={`w-full min-h-screen py-20 bg-[#f9fafb]`}>
       <div className={classes.container}>
         {/* Section Header */}
         <div className="text-center mb-16">
