@@ -74,7 +74,7 @@ const About: React.FC = () => {
             {highlights.map((highlight) => (
               <div
                 key={highlight.title}
-                className="flex items-start gap-4 p-6 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10"
+                className="flex items-start gap-4 p-6 bg-primary-950 rounded-lg border border-primary-900"
               >
                 <div className="p-2 rounded-lg bg-accent-core-600/10">
                   <div className="text-accent-core-600">
