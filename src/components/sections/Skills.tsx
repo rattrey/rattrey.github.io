@@ -235,7 +235,7 @@ const SkillCard: React.FC<{
   skillIndex: number;
 }> = ({ skill, categoryId, skillIndex }) => {
   return (
-    <div className="bg-[#273e54] rounded-lg border border-[#324d65] hover:bg-[#324d65]">
+    <div className={`${theme.card.dark.base} ${theme.card.dark.hover}`}>
       <div className="p-8">
         {/* Header Section */}
         <div className="space-y-4 mb-6">
@@ -284,7 +284,7 @@ const SkillCard: React.FC<{
         </div>
 
         {/* Case Study Section */}
-        <div className="bg-[#273e54] rounded-lg border border-[#324d65] p-6 mb-6">
+        <div className={`${theme.card.dark.base} p-6 mb-6`}>
           <h4 className="text-lg font-medium text-white mb-3">
             {skill.caseStudy.project}
           </h4>
@@ -342,11 +342,9 @@ export default function EnhancedSkillsSection() {
                 key={key}
                 onClick={() => setActiveCategory(activeCategory === key ? null : key)}
                 className={`
-                  bg-[#273e54] rounded-lg border border-[#324d65]
+                  ${theme.card.dark.base}
                   p-6 
-                  transition-all 
-                  duration-300
-                  hover:bg-[#324d65]
+                  ${theme.card.dark.hover}
                   ${activeCategory === key ? 
                     `${theme.effects.glass} ${theme.effects.glow[key === 'technical' ? 'energy' : 
                       key === 'analytics' ? 'particle' : 'core']}` : 

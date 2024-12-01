@@ -170,6 +170,10 @@ export const theme = {
         border: "border border-white/10",
         hover: "hover:bg-white/15 hover:border-white/20 hover:shadow-lg hover:shadow-accent-core-600/20",
         glow: "shadow-lg shadow-accent-core-600/20",
+        dark: {
+          base: "bg-[#273e54] rounded-lg border border-[#324d65] transition-all duration-300",
+          hover: "hover:bg-[#324d65]"
+        }
       },
     
       // Timeline with particle effects
