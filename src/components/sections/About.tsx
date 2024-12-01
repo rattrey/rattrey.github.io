@@ -32,14 +32,14 @@ const About: React.FC = () => {
         <div className={theme.section.inner}>
         <div className="text-center mb-16">
           <h2 className={`${classes.heading.h2} text-accent-core-600 mb-4`}>About Me</h2>
-          <p className="text-lg text-white max-w-3xl mx-auto">
+          <p className="text-lg text-gray-700 max-w-3xl mx-auto">
             Analytics professional focused on building effective teams and data solutions.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div className="space-y-6">
-            <p className="text-white">
+            <p className="text-gray-700">
               Hi, I'm Rohin. I started my analytics journey in 2013 in 2nd year university when I 
               began learning statistics and R programming. After I finished my undergraduate degree,
               I started learning programming more seriously and transitioned to analytics fully through 
@@ -82,10 +82,10 @@ const About: React.FC = () => {
                   </div>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-white mb-2">
+                  <h3 className="font-semibold text-white mb-2 text-white">
                     {highlight.title}
                   </h3>
-                  <p className="text-white/80">
+                  <p className="text-white/90">
                     {highlight.description}
                   </p>
                 </div>
