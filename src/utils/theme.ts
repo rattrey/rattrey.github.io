@@ -111,8 +111,8 @@ export const theme = {
     },
     // Additional common combinations
     section: {
-      wrapper: `min-h-screen ${theme.layout.padding.y}`,
-      inner: `${theme.layout.maxWidth} mx-auto ${theme.layout.padding.x}`
+      wrapper: 'min-h-screen py-20',
+      inner: 'max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'
     },
     animation: {
       fadeIn: `transition-all duration-${theme.animation.medium}`,
