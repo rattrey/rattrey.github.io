@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Building2, Calendar, ArrowRight, TrendingUp, Users, Code2, Lightbulb } from 'lucide-react';
+import { theme, classes } from '../../utils/theme'; 
 
 // Impact type definition
 type ImpactType = 'high' | 'medium' | 'standard';
