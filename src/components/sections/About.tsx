@@ -27,8 +27,8 @@ const About: React.FC = () => {
   ];
 
   return (
-    <section id="about" className={`${classes.section.wrapper}`}>
-      <div className={classes.section.inner}>
+    <section id="about" className="min-h-screen py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className={`${classes.heading.h2} ${theme.colors.text.primary} mb-4`}>About Me</h2>
           <p className={`text-lg ${theme.colors.text.secondary} max-w-3xl mx-auto`}>
