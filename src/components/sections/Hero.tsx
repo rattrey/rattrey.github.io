@@ -52,8 +52,7 @@ const Hero = () => {
                 Analytics Professional & Data Scientist
               </h2>
               <p className="text-lg text-white max-w-2xl mx-auto">
-                Building and leading analytics teams to deliver organization growth through 
-                experimentation, insights, and data-driven strategy.
+                Building solutions with data.
               </p>
             </div>
 

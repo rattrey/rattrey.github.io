@@ -329,9 +329,6 @@ export default function EnhancedSkillsSection() {
           <h2 className={`${classes.heading.h2} text-accent-core-600 mb-4`}>
             Skills & Expertise
           </h2>
-          <p className="text-lg text-white max-w-3xl mx-auto">
-            Comprehensive experience in technical implementation, analytics leadership, and data strategy.
-          </p>
         </div>
 
         <div className="max-w-[1400px] mx-auto space-y-12"> {/* Added max-width container */}

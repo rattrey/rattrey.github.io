@@ -72,7 +72,6 @@ const About: React.FC = () => {
           {/* Image and Highlights */}
           <div className="space-y-8">
             {/* Profile Image */}
-            
 
             {/* Highlights Grid */}
             <div className="grid grid-cols-1 gap-4">
