@@ -2,7 +2,19 @@
 
 A personal portfolio website showcasing my experience in analytics leadership, technical implementation, and data strategy. Built with React, TypeScript, and Tailwind CSS.
 
+[![Deployment Status](https://github.com/rattrey/rattrey.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/rattrey/rattrey.github.io/actions/workflows/deploy.yml)
+
 View the live site at: [https://rattrey.github.io](https://rattrey.github.io)
+
+## About Me
+
+Analytics professional with expertise in:
+- Data Strategy & Implementation
+- Product Analytics & Experimentation  
+- Technical Solutions Architecture
+- Analytics Team Leadership
+
+Currently leading Product & Analytics at Kijiji, focused on driving growth through data-informed decisions.
 
 ## Features
 
@@ -60,3 +72,10 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+## Contact
+
+For any questions or opportunities, reach out through:
+- LinkedIn: [rohin-attrey](https://www.linkedin.com/in/rohin-attrey/)
+- Email: rohin.attrey@icloud.com
+- GitHub: [@rattrey](https://github.com/rattrey)
