@@ -2,8 +2,6 @@
 
 A personal portfolio website showcasing my experience in analytics leadership, technical implementation, and data strategy. Built with React, TypeScript, and Tailwind CSS.
 
-[![Deployment Status](https://github.com/rattrey/rattrey.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/rattrey/rattrey.github.io/actions/workflows/deploy.yml)
-
 View the live site at: [https://rattrey.github.io](https://rattrey.github.io)
 
 ## About Me
