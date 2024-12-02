@@ -1,4 +1,4 @@
-# Rohin Attrey's Portfolio
+# My Portfolio
 
 A personal portfolio website showcasing my experience in analytics leadership, technical implementation, and data strategy. Built with React, TypeScript, and Tailwind CSS.
 
