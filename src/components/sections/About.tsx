@@ -63,16 +63,18 @@ const About: React.FC = () => {
               {/* Text Content */}
               <div className="space-y-6">
                 <p className="text-gray-700">
-                  Hi, I'm Rohin! My fascination with data started back in university when I discovered how statistics and programming could uncover hidden patterns in everyday life.
+                  Hi, I'm Rohin! I've been working in data & analytics for over 7 years now. Looking back, the path was certainly not clear. 
+                  My fascination with data started back in university statistics as I started to gain a grasp on the science of uncertainty. 
+                  After university, I decided to pursue more specialized training in data and analytics and completed a Master's.   
                 </p>
 
                 <p className="text-gray-700">
-                  I love exploring the intersection of technology and human behavior. Whether it's analyzing consumer patterns or building data tools, I'm drawn to projects that help us understand the 'why' behind the numbers. 
+                  I love exploring the intersection of technology, science and business. Whether it's analyzing consumer patterns or building data tools, I'm drawn to projects that help us understand the 'why?' behind the numbers as well as the 'so what?'. 
                   I have a solutions oriented mind when it comes to approaching ambiguous problems, and I always strive to find the most effective way to solve them.
                 </p>
 
                 <p className="text-gray-700">
-                  When I'm not diving into data, you'll find me experimenting with new programming languages, playing golf, or drumming. 
+                  When I'm not diving into my professional craft, you'll find me working out, playing golf, or drumming. 
                 </p>
               </div>
             </div>
