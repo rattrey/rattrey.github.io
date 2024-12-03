@@ -39,16 +39,16 @@ function App() {
         <About />
       </SectionWrapper>
 
+      {/* Experience Section */}
+            <SectionWrapper id="experience" className="bg-gray-50 dark:bg-gray-800">
+        <Experience />
+      </SectionWrapper>
+
       {/* Skills Section */}
       <SectionWrapper id="skills" className="bg-gray-50 dark:bg-gray-800">
         <Skills />
       </SectionWrapper>
 
-
-      {/* Experience Section */}
-      <SectionWrapper id="experience" className="bg-gray-50 dark:bg-gray-800">
-        <Experience />
-      </SectionWrapper>
 
       {/* Contact Section */}
       <SectionWrapper id="contact" className="bg-white dark:bg-gray-900">

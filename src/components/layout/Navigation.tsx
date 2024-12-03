@@ -20,7 +20,7 @@ const Navigation = () => {
       setIsScrolled(winScroll > 20);
 
       // Update active section
-      const sections = ['home', 'portfolio', 'skills', 'experience', 'contact'];
+      const sections = ['home', 'portfolio', 'experience', 'skills', 'contact'];
       for (const section of sections.reverse()) {
         const element = document.getElementById(section);
         if (element) {
@@ -55,9 +55,9 @@ const Navigation = () => {
   const navItems = [
     { id: 'home', label: 'Home' },
     { id: 'about', label: 'About' },
+    { id: 'experience', label: 'Experience' },
     { id: 'skills', label: 'Skills' },
     // { id: 'portfolio', label: 'Portfolio' },
-    { id: 'experience', label: 'Experience' },
     { id: 'contact', label: 'Contact' }
   ];
 

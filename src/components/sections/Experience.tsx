@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Building2, Calendar, ArrowRight, TrendingUp, Users, Code2, Lightbulb } from 'lucide-react';
+import { theme, classes } from '../../utils/theme';
 
 // Impact type definition
 type ImpactType = 'high' | 'medium' | 'standard';
@@ -154,27 +155,45 @@ const TimelineVisualization = () => {
   const timelineRoles = [...roles].reverse();
 
   return (
-    <div className="mb-12 overflow-x-auto">
-      <div className="min-w-max flex items-center justify-center gap-4">
-        {timelineRoles.map((role, index) => (
-          <div key={index} className="flex items-center">
-            <div className="flex flex-col items-center">
+    <div className="mb-8 sm:mb-12">
+      {/* Mobile Timeline */}
+      <div className="block sm:hidden">
+        <div className="flex flex-col space-y-4">
+          {timelineRoles.map((role, index) => (
+            <div key={index} className="flex items-center space-x-3">
               <div className="w-3 h-3 rounded-full bg-[#373373]" />
-              <div className="text-sm text-gray-600 mt-2 whitespace-nowrap">{role.period}</div>
-              <div className="text-xs text-gray-500 whitespace-nowrap">{role.company}</div>
+              <div className="flex flex-col">
+                <div className="text-sm font-medium text-gray-600">{role.period}</div>
+                <div className="text-xs text-gray-500">{role.company}</div>
+              </div>
             </div>
-            {index < timelineRoles.length - 1 && (
-              <div className="w-24 h-px bg-gray-200 mx-2" />
-            )}
-          </div>
-        ))}
+          ))}
+        </div>
+      </div>
+      
+      {/* Desktop Timeline */}
+      <div className="hidden sm:block overflow-x-auto">
+        <div className="min-w-max flex items-center justify-center gap-4">
+          {timelineRoles.map((role, index) => (
+            <div key={index} className="flex items-center">
+              <div className="flex flex-col items-center">
+                <div className="w-3 h-3 rounded-full bg-[#373373]" />
+                <div className="text-sm text-gray-600 mt-2 whitespace-nowrap">{role.period}</div>
+                <div className="text-xs text-gray-500 whitespace-nowrap">{role.company}</div>
+              </div>
+              {index < timelineRoles.length - 1 && (
+                <div className="w-24 h-px bg-gray-200 mx-2" />
+              )}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
 };
 
+
 const ExperienceSection = () => {
-  // Intersection Observer for scroll animations
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -199,17 +218,17 @@ const ExperienceSection = () => {
   }, []);
 
   return (
-    <div className="py-20" ref={sectionRef}>
-      <div className="text-center mb-16">
-        <h2 className="text-3xl font-bold text-gray-900 mb-4">Professional Experience</h2>
-        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-          Progressive experience in analytics leadership, technical implementation, and data strategy.
+    <div className="py-8 sm:py-20 px-4 sm:px-6" ref={sectionRef}>
+      <div className="text-center mb-8 sm:mb-16">
+      <h2 className={`${classes.heading.h2} text-accent-core-600 mb-4`}>Professional Experiences</h2>
+        <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto">
+          Experience in analytics leadership, technical implementation, data analysis and data strategy.
         </p>
       </div>
 
       <TimelineVisualization />
 
-      <div className="max-w-5xl mx-auto space-y-12">
+      <div className="max-w-5xl mx-auto space-y-6 sm:space-y-12">
         {roles.map((role, index) => (
           <div 
             key={index} 
@@ -218,40 +237,40 @@ const ExperienceSection = () => {
           >
             <div className="relative">
               {index < roles.length - 1 && (
-                <div className="absolute left-8 top-20 bottom-0 w-px bg-gray-200" />
+                <div className="absolute left-4 sm:left-8 top-20 bottom-0 w-px bg-gray-200 hidden sm:block" />
               )}
               
-              <div className="bg-white rounded-xl shadow-md p-8">
+              <div className="bg-white rounded-lg sm:rounded-xl shadow-sm sm:shadow-md p-4 sm:p-8">
                 {/* Role Header */}
-                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900">{role.title}</h3>
-                    <div className="flex items-center gap-2 mt-2 text-gray-600">
+                <div className="flex flex-col mb-4 sm:mb-6">
+                  <h3 className="text-lg sm:text-xl font-semibold text-gray-900">{role.title}</h3>
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-2 mt-2">
+                    <div className="flex items-center gap-2 text-gray-600">
                       <Building2 className="w-4 h-4" />
-                      <span>{role.company}</span>
-                      <span className="text-gray-300">•</span>
-                      <span>{role.location}</span>
+                      <span className="text-sm">{role.company}</span>
+                      <span className="text-gray-300 hidden sm:inline">•</span>
+                      <span className="text-sm hidden sm:inline">{role.location}</span>
                     </div>
-                  </div>
-                  <div className="flex items-center gap-2 mt-2 md:mt-0">
-                    <Calendar className="w-4 h-4 text-gray-400" />
-                    <span className="text-gray-600">{role.period}</span>
+                    <div className="flex items-center gap-2">
+                      <Calendar className="w-4 h-4 text-gray-400" />
+                      <span className="text-sm text-gray-600">{role.period}</span>
+                    </div>
                   </div>
                 </div>
 
                 {/* Description */}
-                <p className="text-gray-600 mb-6 leading-relaxed">{role.description}</p>
+                <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6 leading-relaxed">{role.description}</p>
 
                 {/* Achievements with Impact Indicators */}
-                <div className="space-y-4">
+                <div className="space-y-3 sm:space-y-4">
                   {role.achievements.map((achievement, aIndex) => (
-                    <div key={aIndex} className="flex items-start gap-3 group">
+                    <div key={aIndex} className="flex items-start gap-2 sm:gap-3 group">
                       <div className={`flex items-center gap-2 px-2 py-1 rounded-lg transition-all duration-300 ${
                         getImpactColor(achievement.impact.type, achievement.impact.category)
                       }`}>
                         {getImpactIcon(achievement.impact.category)}
                       </div>
-                      <span className="text-gray-700 flex-1">{achievement.text}</span>
+                      <span className="text-sm sm:text-base text-gray-700 flex-1">{achievement.text}</span>
                     </div>
                   ))}
                 </div>

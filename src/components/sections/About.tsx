@@ -30,77 +30,80 @@ const About: React.FC = () => {
     <section id="about" className={theme.section.wrapper}>
       <div className={`${theme.section.background.default} w-full h-full`}>
         <div className={theme.section.inner}>
-        <div className="text-center mb-16">
-          <h2 className={`${classes.heading.h2} text-accent-core-600 mb-4`}>About Me</h2>
-          <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-            Analytics professional focused on building effective teams and data solutions.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-12 items-start">
-          <div className="space-y-6">
-            <p className="text-gray-700">
-              Hi, I'm Rohin. I started my analytics journey in 2013 in 2nd year university when I 
-              began learning statistics and R programming. After I finished my undergraduate degree,
-              I started learning programming more seriously and transitioned to analytics fully through 
-              a Master's degree specialty in Business Analytics. 
-            </p>
-
-            <p className="text-gray-700">
-              My first role was at Loblaw Companies Limited, where I developed pricing models and 
-              automated processes using tools like VBA, creating tools that were adopted across analytics teams. 
-              I later moved into consumer insights, where I developed core measurement methodologies for in-app loyalty testing, working on user segmentation and retention analysis among others.
-              My final role there involved developing a pricing optimization engine using neural networks 
-              and Bayesian models for measurement methodology. I leaned heavily into python and SQL 
-              during this part of my role and developed a passion for data engineering.
-            </p>
-
-            <p className="text-gray-700">
-              Now at Kijiji as Manager of Analytics & Strategy, I work to advance our 
-              data infrastructure and analytics frameworks. My work spans ETL architecture, 
-              driver tree analysis, KPI frameworks, and product analytics; supporting teams across the 
-              organization with data-driven solutions.
-            </p>
-
-            <p className="text-gray-700">
-              I love solving complex problems by connecting the dots between data, technology, and business needs. At every organization I've worked with, 
-              I've focused on understanding the common goals, current data needs, and the limitations. This allows me to make a determination on the best 
-              analytical model or approach. This has led to building tools and frameworks that teams want to use.
+          <div className="text-center mb-16">
+            <h2 className={`${classes.heading.h2} text-accent-core-600 mb-4`}>About Me</h2>
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+              Analytics professional focused on building effective teams and data solutions.
             </p>
           </div>
 
-          {/* Image and Highlights */}
-          <div className="space-y-8">
-            {/* Profile Image */}
-
-            {/* Highlights Grid */}
-            <div className="grid grid-cols-1 gap-4">
-            {highlights.map((highlight) => (
-              <div
-                key={highlight.title}
-                className={`flex items-start gap-4 p-6 ${theme.card.dark.base}`}
-              >
-                <div className="p-2 rounded-lg bg-accent-core-600/10">
-                  <div className="text-accent-core-600">
-                    {highlight.icon}
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+            {/* Left Column: Image and Text */}
+            <div>
+              {/* Profile Image */}
+              <div className="h-full">
+                <div className="sticky top-8">
+                  <div className="relative rounded-2xl overflow-hidden shadow-lg">
+                    <div className="aspect-[3/4]">
+                      <img
+                        src="/../images/IMG_5993.jpg"
+                        alt="Rohin Attrey"
+                        className="object-cover w-full h-full"
+                      />
+                      {/* Gradient Overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
+                    </div>
                   </div>
                 </div>
-                <div>
-                  <h3 className="font-semibold text-white mb-2 text-white">
-                    {highlight.title}
-                  </h3>
-                  <p className="text-white/90">
-                    {highlight.description}
-                  </p>
-                </div>
               </div>
-            ))}
+
+              {/* Spacer */}
+              <div className="h-8"></div>
+
+              {/* Text Content */}
+              <div className="space-y-6">
+                <p className="text-gray-700">
+                  Hi, I'm Rohin! My fascination with data started back in university when I discovered how statistics and programming could uncover hidden patterns in everyday life.
+                </p>
+
+                <p className="text-gray-700">
+                  I love exploring the intersection of technology and human behavior. Whether it's analyzing consumer patterns or building data tools, I'm drawn to projects that help us understand the 'why' behind the numbers. 
+                  I have a solutions oriented mind when it comes to approaching ambiguous problems, and I always strive to find the most effective way to solve them.
+                </p>
+
+                <p className="text-gray-700">
+                  When I'm not diving into data, you'll find me experimenting with new programming languages, playing golf, or drumming. 
+                </p>
+              </div>
+            </div>
+
+            {/* Right Column: Highlights Cards */}
+            <div className="grid grid-cols-1 gap-4">
+              {highlights.map((highlight) => (
+                <div
+                  key={highlight.title}
+                  className={`flex items-start gap-4 p-6 ${theme.card.dark.base}`}
+                >
+                  <div className="p-2 rounded-lg bg-accent-core-600/10">
+                    <div className="text-accent-core-600">
+                      {highlight.icon}
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-white mb-2">
+                      {highlight.title}
+                    </h3>
+                    <p className="text-white/90">
+                      {highlight.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    </div>
-  </section>
+    </section>
   );
 };
 

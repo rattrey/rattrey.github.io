@@ -229,23 +229,27 @@ const categories: Categories = {
   }
 };
 
+
 const SkillCard: React.FC<{ 
   skill: Skill;
   categoryId: CategoryId;
   skillIndex: number;
 }> = ({ skill, categoryId, skillIndex }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   return (
     <div className={`${theme.card.dark.base} ${theme.card.dark.hover}`}>
-      <div className="p-8">
+      <div className="p-4 sm:p-8">
         {/* Header Section */}
-        <div className="space-y-4 mb-6">
-          <div className="flex justify-between items-start">
-            <h3 className="text-xl font-semibold text-white">{skill.name}</h3>
+        <div className="space-y-3 sm:space-y-4 mb-4 sm:mb-6">
+          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 sm:gap-0">
+            <h3 className="text-lg sm:text-xl font-semibold text-white">{skill.name}</h3>
             <span className={`
               ${theme.card.base}
-              px-3 py-1 
+              px-2 sm:px-3 py-1 
               text-sm 
               rounded-full
+              self-start
               ${skill.expertise === "Expert" ? "bg-accent-core-600/20 text-accent-core-300" :
                 skill.expertise === "Advanced" ? "bg-accent-energy-600/20 text-accent-energy-300" :
                 "bg-accent-particle-600/20 text-accent-particle-300"}
@@ -254,7 +258,7 @@ const SkillCard: React.FC<{
             </span>
           </div>
           
-          <div className="flex items-center gap-3 text-sm text-white/80">
+          <div className="flex flex-wrap items-center gap-3 text-sm text-white/80">
             <div className="flex items-center gap-1.5">
               <Timer className="w-4 h-4" />
               <span>{skill.yearsExperience}+ years</span>
@@ -268,49 +272,60 @@ const SkillCard: React.FC<{
           </div>
         </div>
 
-        {/* Applications Section */}
-        <div className="mb-6">
-          <h4 className="text-sm font-medium text-white mb-3">Key Applications</h4>
-          <div className="flex flex-wrap gap-2">
-            {skill.applications.map(app => (
-              <span 
-                key={app} 
-                className="px-3 py-1.5 rounded-full text-sm bg-white/10 text-white"
-              >
-                {app}
-              </span>
-            ))}
-          </div>
-        </div>
+        {/* Mobile Expand/Collapse Button */}
+        <button 
+          className="md:hidden w-full text-sm text-accent-energy-300 mb-4"
+          onClick={() => setIsExpanded(!isExpanded)}
+        >
+          {isExpanded ? 'Show less' : 'Show more'}
+        </button>
 
-        {/* Case Study Section */}
-        <div className={`${theme.card.dark.base} p-6 mb-6`}>
-          <h4 className="text-lg font-medium text-white mb-3">
-            {skill.caseStudy.project}
-          </h4>
-          <p className="text-white/80 mb-4 leading-relaxed">
-            {skill.caseStudy.description}
-          </p>
-          <div className="flex items-start gap-2 bg-accent-core-600/10 p-3 rounded-lg">
-            <CheckCircle2 className="w-5 h-5 text-accent-core-600 flex-shrink-0 mt-0.5" />
-            <p className="text-white text-sm leading-relaxed">
-              {skill.caseStudy.impact}
+        {/* Collapsible Content - Always visible on desktop */}
+        <div className={`${!isExpanded ? 'hidden md:block' : 'block'}`}>
+          {/* Applications Section */}
+          <div className="mb-4 sm:mb-6">
+            <h4 className="text-sm font-medium text-white mb-2 sm:mb-3">Key Applications</h4>
+            <div className="flex flex-wrap gap-1.5 sm:gap-2">
+              {skill.applications.map(app => (
+                <span 
+                  key={app} 
+                  className="px-2 sm:px-3 py-1 sm:py-1.5 rounded-full text-xs sm:text-sm bg-white/10 text-white"
+                >
+                  {app}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Case Study Section */}
+          <div className={`${theme.card.dark.base} p-4 sm:p-6 mb-4 sm:mb-6`}>
+            <h4 className="text-base sm:text-lg font-medium text-white mb-2 sm:mb-3">
+              {skill.caseStudy.project}
+            </h4>
+            <p className="text-sm sm:text-base text-white/80 mb-3 sm:mb-4 leading-relaxed">
+              {skill.caseStudy.description}
             </p>
+            <div className="flex items-start gap-2 bg-accent-core-600/10 p-2 sm:p-3 rounded-lg">
+              <CheckCircle2 className="w-4 sm:w-5 h-4 sm:h-5 text-accent-core-600 flex-shrink-0 mt-0.5" />
+              <p className="text-white text-xs sm:text-sm leading-relaxed">
+                {skill.caseStudy.impact}
+              </p>
+            </div>
           </div>
-        </div>
 
-        {/* Related Skills Section */}
-        <div>
-          <h4 className="text-sm font-medium text-white mb-3">Related Skills</h4>
-          <div className="flex flex-wrap gap-2">
-            {skill.relatedSkills.map(related => (
-              <span 
-                key={related} 
-                className="px-3 py-1.5 rounded-full text-sm bg-accent-energy-600/10 text-accent-energy-300"
-              >
-                {related}
-              </span>
-            ))}
+          {/* Related Skills Section */}
+          <div>
+            <h4 className="text-sm font-medium text-white mb-2 sm:mb-3">Related Skills</h4>
+            <div className="flex flex-wrap gap-1.5 sm:gap-2">
+              {skill.relatedSkills.map(related => (
+                <span 
+                  key={related} 
+                  className="px-2 sm:px-3 py-1 sm:py-1.5 rounded-full text-xs sm:text-sm bg-accent-energy-600/10 text-accent-energy-300"
+                >
+                  {related}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </div>
@@ -319,28 +334,30 @@ const SkillCard: React.FC<{
 };
 
 export default function EnhancedSkillsSection() {
-  const [activeCategory, setActiveCategory] = useState<CategoryId | null>('technical');
+  const [activeCategory, setActiveCategory] = useState<CategoryId>('technical');
 
   return (
-    <section className={`w-full min-h-screen py-20 bg-[#f9fafb]`}>
+    <section className="w-full min-h-screen py-8 sm:py-20 bg-[#f9fafb]">
       <div className={classes.container}>
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 sm:mb-16">
           <h2 className={`${classes.heading.h2} text-accent-core-600 mb-4`}>
             Skills & Expertise
           </h2>
         </div>
 
-        <div className="max-w-[1400px] mx-auto space-y-12"> {/* Added max-width container */}
-          {/* Category Selection */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="max-w-[1400px] mx-auto space-y-6 sm:space-y-12 px-4 sm:px-6">
+          {/* Category Selection - Horizontal Scroll on Mobile */}
+          <div className="flex md:grid md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 overflow-x-auto md:overflow-visible pb-4 md:pb-0">
             {(Object.entries(categories) as [CategoryId, Category][]).map(([key, category]) => (
               <button
                 key={key}
-                onClick={() => setActiveCategory(activeCategory === key ? null : key)}
+                onClick={() => setActiveCategory(key)}
                 className={`
                   ${theme.card.dark.base}
-                  p-6 
+                  p-4 sm:p-6 
+                  flex-shrink-0
+                  w-[280px] md:w-auto
                   ${theme.card.dark.hover}
                   ${activeCategory === key ? 
                     `${theme.card.dark.base} ${theme.effects.glow[key === 'technical' ? 'energy' : 
@@ -357,10 +374,10 @@ export default function EnhancedSkillsSection() {
                 `}>
                   {category.icon}
                 </div>
-                <h3 className="text-lg font-semibold mt-4 mb-2 text-white">
+                <h3 className="text-base sm:text-lg font-semibold mt-3 sm:mt-4 mb-1 sm:mb-2 text-white">
                   {category.title}
                 </h3>
-                <p className="text-sm text-white/80">
+                <p className="text-xs sm:text-sm text-white/80">
                   {category.description}
                 </p>
               </button>
@@ -368,18 +385,16 @@ export default function EnhancedSkillsSection() {
           </div>
 
           {/* Skills Grid */}
-          {activeCategory && (
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              {categories[activeCategory].skills.map((skill, index) => (
-                <SkillCard 
-                  key={`${activeCategory}-${index}`}
-                  skill={skill}
-                  categoryId={activeCategory}
-                  skillIndex={index}
-                />
-              ))}
-            </div>
-          )}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
+            {categories[activeCategory].skills.map((skill, index) => (
+              <SkillCard 
+                key={`${activeCategory}-${index}`}
+                skill={skill}
+                categoryId={activeCategory}
+                skillIndex={index}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
