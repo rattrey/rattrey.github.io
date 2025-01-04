@@ -63,14 +63,14 @@ const About: React.FC = () => {
               {/* Text Content */}
               <div className="space-y-6">
                 <p className="text-gray-700">
-                  Hi, I'm Rohin! I've been working in data & analytics for over 7 years now. Looking back, the path was certainly not clear. 
-                  My fascination with data started back in university statistics as I started to gain a grasp on the science of uncertainty. 
-                  After university, I decided to pursue more specialized training in data and analytics and completed a Master's.   
+                  Hi, I'm Rohin! I was born in India and came to Canada when I was 6 with my mom. I built my first computer when I was 11 years old but it wasn't until much later in University that I found my passion in statistics, probability and decision sciences back in 2014.
+                  After my undergraduate degree in Health Sciences, I decided to pursue my interest in statistics and decision making and obtained my Master's Degree in Analytics (MSc.).
+
+                  Since then, I've been in the analytics field for over 7 years and have worked with cross functional teams across Pricing Analytics, Loyalty Analytics, Enterprise Consumer Insights and Product Analytics. 
                 </p>
 
                 <p className="text-gray-700">
-                  I love exploring the intersection of technology, science and business. Whether it's analyzing consumer patterns or building data tools, I'm drawn to projects that help us understand the 'why?' behind the numbers as well as the 'so what?'. 
-                  I have a solutions oriented mind when it comes to approaching ambiguous problems, and I always strive to find the most effective way to solve them.
+                  I love exploring the intersection of technology, science and business. I am drawn to solving organizational challenges through using my technical skills in data querying, data modelling and data engineering.
                 </p>
 
                 <p className="text-gray-700">
